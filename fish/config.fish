@@ -6,8 +6,9 @@ end
 
 # Check if starship prompt is installed
 if ! command -v starship &> /dev/null
-    echo "Missing starship shell"
-    exit 1
+    echo "Missing starship prompt. Installing"
+    curl -sS https://starship.rs/install.sh | sh
+    starship init fish | source
 else
     starship init fish | source
 end
@@ -24,4 +25,5 @@ alias ela="exa -la --icons"
 alias els="exa -lh --icons"
 alias eldf="exa -lh --icons -s type"
 
+# nvm for fish
 test -s /home/jhossep/.nvm-fish/nvm.fish; and source /home/jhossep/.nvm-fish/nvm.fish
