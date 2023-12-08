@@ -19,7 +19,7 @@ require("lazy").setup("plugins")
 vim.cmd("colorscheme terafox")
 
 
--- -- only load if theme doesnt have transparent option
--- local theme = require("config.colorscheme_override")
--- theme.transparent_override()
+-- only load if theme doesnt have transparent option
+local theme = require("config.colorscheme_override")
+theme.transparent_override()
 
