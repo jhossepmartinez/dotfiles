@@ -13,6 +13,7 @@ return {
                     -- "help",
 
                     "javascript",
+                    "typescript",
                     "python",
                     -- "php",
                     "html",
