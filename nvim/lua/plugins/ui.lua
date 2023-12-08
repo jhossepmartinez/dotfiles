@@ -49,9 +49,10 @@ return {
             highlights = {
                 fill = {
                     bg = "",
+                    fg = ""
                 },
-                background = {
-                    fg = "",
+                background = { -- Visible Buffer
+                    fg = "#5e6d77",
                     bg = ""
                 },
                 buffer_visible = {
@@ -60,9 +61,14 @@ return {
                 },
                 buffer_selected = {
                     bg = "",
-                    fg = "White"
+                    fg = "",
+                    italic = true,
+                    bold = true,
                 },
                 tab = {
+                    bg = "Red"
+                },
+                tab_selected = {
                     bg = "Red"
                 },
                 close_button = {
