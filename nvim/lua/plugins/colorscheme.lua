@@ -1,5 +1,8 @@
 return {
     {
+        "Shatur/neovim-ayu"
+    },
+    {
         "simao-ferreira/thescream.nvim"
     },
     {
