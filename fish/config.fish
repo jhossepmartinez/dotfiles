@@ -25,5 +25,3 @@ alias ela="exa -la --icons"
 alias els="exa -lh --icons"
 alias eldf="exa -lh --icons -s type"
 
-# nvm for fish
-test -s /home/jhossep/.nvm-fish/nvm.fish; and source /home/jhossep/.nvm-fish/nvm.fish
