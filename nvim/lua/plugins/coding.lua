@@ -10,16 +10,14 @@ return {
         config = true,
     },
     {
-        "tpope/vim-surround", 
+        "tpope/vim-surround",
     },
-    { 
+    {
         "lukas-reineke/indent-blankline.nvim",
-        config = function()
-            vim.g.indent_blankline_filetype_exclude = { 'text' }
-            vim.cmd("highlight IndentBlankLineChar guifg=#6d7f8b")
-        end
+        main = "ibl",
+        opts = {}
     },
-     {
+    {
         "windwp/nvim-ts-autotag",
     },
     {
