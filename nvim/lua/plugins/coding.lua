@@ -15,7 +15,20 @@ return {
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
-        opts = {}
+        opts = {
+            indent = {},
+            scope = {
+                enabled = false,
+                exclude = {
+                    language = {
+                        "lua",
+                        "python",
+                        "typescript",
+                        "json"
+                    }
+                }
+            }
+        }
     },
     {
         "windwp/nvim-ts-autotag",
