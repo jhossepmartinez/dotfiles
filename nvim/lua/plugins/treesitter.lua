@@ -17,6 +17,7 @@ return {
                     "python",
                     -- "php",
                     "html",
+                    "json",
                     "css",
                     -- "rust",
                     -- "markdown",
