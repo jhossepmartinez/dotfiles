@@ -64,6 +64,7 @@ return {
                 -- "phpactor",
                 "tsserver",
                 "tailwindcss",
+                "emmet_language_server"
             })
 
             -- lsp.skip_server_setup("tailwindcss")
