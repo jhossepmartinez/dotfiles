@@ -18,8 +18,8 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- Appearance
-opt.termguicolors = false
-opt.signcolumn = "yes:1"
+opt.termguicolors = true
+opt.signcolumn = "yes"
 
 -- Clipboard
 opt.clipboard:append("unnamedplus")
