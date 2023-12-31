@@ -31,11 +31,12 @@ return {
     -- Lualine
     {
         "nvim-lualine/lualine.nvim",
+        lazy = false,
         config = function()
             require("lualine").setup({
                 options = {
                     icons_enabled = true,
-                    disabled_filetypes = { "neo-tree" }
+                    disabled_filetypes = { "neo-tree" },
                 }
             })
         end
