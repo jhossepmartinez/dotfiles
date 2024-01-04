@@ -28,6 +28,59 @@ return {
         }
     },
 
+    -- Bufferline
+    {
+        "akinsho/bufferline.nvim",
+        lazy = false,
+        opts = {
+            options = {
+                indicator = { icon = "|" },
+                separator_style = { "", "" }, -- Removes buffer separators
+                offsets = {
+                    {
+                        filetype = "neo-tree",
+                        text = "NeoTree",
+                        text_align = "left",
+                        separator = "|",
+                        highlight = "Directory"
+                    }
+                }
+            },
+            highlights = {
+                separator = {
+                    bg = "",
+                    fg = ""
+                },
+                separator_visible = {
+                    bg = "",
+                    fg = ""
+                },
+                separator_selected = {
+                    bg = "",
+                    fg = ""
+                },
+                trunc_marker = { -- Arrows that appear when over max width
+                    bg = "",
+                    fg = ""
+                },
+                offset_separator = { -- Title offset
+                },
+                indicator_visible = {
+                    bg = "",
+                    fg = ""
+                },
+                indicator_selected = {
+                    bg = "",
+                    fg = ""
+                },
+            }
+        },
+        keys = {
+            { "<S-l>", "<cmd>BufferLineCycleNext<CR>" },
+            { "<S-h>", "<cmd>BufferLineCyclePrev<CR>" }
+        }
+    },
+
     -- Lualine
     {
         "nvim-lualine/lualine.nvim",
