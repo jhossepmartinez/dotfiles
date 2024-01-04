@@ -19,7 +19,7 @@ opt.smartcase = true
 
 -- Appearance
 opt.termguicolors = true
-opt.signcolumn = "yes"
+opt.signcolumn = "yes:1"
 
 -- Clipboard
 opt.clipboard:append("unnamedplus")
@@ -29,6 +29,7 @@ opt.wrap = false
 
 -- Basic Styling
 vim.api.nvim_set_hl(0, 'Comment', { italic=true })
+vim.opt.fillchars:append { eob = " " }
 
 -- Providers
 vim.g.python3_host_prog = "/usr/bin/python3"
