@@ -12,14 +12,22 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Load plugins using lazy
-vim.g.mapleader = " " -- mapleader must be loaded before lazy
-require("lazy").setup("plugins")
-
 -- Configuration
 require("config.options")
 require("config.keymaps")
 
+-- Load plugins using lazy
+vim.g.mapleader = " " -- mapleader must be loaded before lazy
+require("lazy").setup("plugins")
+
+-- Set Colorscheme
+-- vim.g.ayucolor='mirage'
+vim.cmd("colorscheme nordic") -- colorscheme before configuration so it can be overriden by preferences
+-- Nisha theme seems nice
+
 -- Transparency override
 local theme = require("config.colorscheme_override")
+theme.colorscheme_addon()
 theme.transparent_override()
+-- theme.colorscheme_default()
+
