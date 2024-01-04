@@ -27,4 +27,8 @@ opt.clipboard:append("unnamedplus")
 -- Line Wrapping
 opt.wrap = false
 
+-- Basic Styling
 vim.api.nvim_set_hl(0, 'Comment', { italic=true })
+
+-- Providers
+vim.g.python3_host_prog = "/usr/bin/python3"
