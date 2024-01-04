@@ -27,7 +27,7 @@ return {
                 -- Called for each installed server
                 function(server_name)
                     local capabilities = require("cmp_nvim_lsp").default_capabilities()
-                    require("lspconfig")[server_name].setup({ on_attach = on_attach, capabilities = capabilities })
+                    require("lspconfig")[server_name].setup({ capabilities = capabilities })
                 end,
                 -- Specific configuration for each server
                 ["lua_ls"] = function()
