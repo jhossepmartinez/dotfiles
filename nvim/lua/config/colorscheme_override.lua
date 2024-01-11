@@ -1,9 +1,9 @@
 local M = {}
 function M.transparent_override()
     local highlights = {
-        -- "Normal",
-        -- "NormalNC",
-        -- "LineNr",
+        "Normal",
+        "NormalNC",
+        "LineNr",
         -- "LineNr", "Folded", "NonText",
         -- "SpecialKey", "VertSplit",
         -- "EndOfBuffer", 'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier', 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer', 'MsgArea', 'CursorLine', 
