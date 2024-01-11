@@ -7,6 +7,11 @@ return {
             indent = { char = "▏" },
             scope = {
                 enabled = false
+            },
+            exclude = {
+                filetypes = {
+                    -- "markdown"
+                }
             }
         }
     },
@@ -27,9 +32,8 @@ return {
             vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
             vim.o.foldlevelstart = 99
             vim.o.foldenable = true
-            vim.o.fillchars = [[fold: ,foldopen:,foldsep: ,foldclose:]]
-            -- vim.o.foldnestmax = '1'
 
+            -- Remove depth number indicator
             local builtin = require("statuscol.builtin")
             require("statuscol").setup(
             {
@@ -41,9 +45,12 @@ return {
                 }
             }
             )
-
-            vim.keymap.set("n", "zR", require("ufo").openAllFolds)
-            vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
         end,
+    },
+    {
+        "kdheepak/lazygit.nvim",
+        keys = {
+            { "<Leader>gg", "<cmd>LazyGit<CR>" }
+        }
     }
 }
