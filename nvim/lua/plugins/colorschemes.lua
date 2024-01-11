@@ -1,5 +1,9 @@
 return {
     {
+        "folke/tokyonight.nvim",
+        lazy = false
+    },
+    {
         "rose-pine/neovim",
         lazy = false,
         config = function()
@@ -9,13 +13,34 @@ return {
         end
     },
     {
+        "rebelot/kanagawa.nvim",
+        opts = {
+            transparent = true
+        }
+    },
+    {
+        "catppuccin/nvim",
+        lzay = false,
+        config = function()
+            require("catppuccin").setup({
+                transparent_background = true
+            })
+        end
+    },
+    {
         "rhysd/vim-color-spring-night"
     },
     {
         "AlexvZyl/nordic.nvim",
-        opts = {
-            transparent_bg = true
-        }
+        config = function()
+            require("nordic").setup({
+                transparent_bg = true,
+                override = {
+
+                }
+
+            })
+        end
     },
     {
         "p00f/alabaster.nvim"
@@ -41,7 +66,13 @@ return {
         end
     },
     {
-        "heraldofsolace/nisha-vim"
+        "heraldofsolace/nisha-vim",
+        dependencies = {
+            "tjdevries/colorbuddy.nvim"
+        },
+        -- opts = {
+        --     background_set = true
+        -- }
     },
     {
         "EdenEast/nightfox.nvim",
