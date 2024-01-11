@@ -14,6 +14,7 @@ function fish_prompt
         echo ""
     end
 
+
     set_color $textcol
 
     # Path information prompt
@@ -49,7 +50,8 @@ alias els="exa -lh --icons"
 alias eldf="exa -lh --icons -s type"
 
 # Environment variables
-export VIRTUAL_ENV_DISABLE_PROMPT=1
+export VIRTUAL_ENV_DISABLE_PROMPT=1 # Disables virtual env prompt
+export PATH="$HOME/.cargo/bin:$PATH" # Patch to run cargo with fish shell
 
 # Node fisher plugin (jorgebucaran/nvm.fish)
 set --universal nvm_default_version v18.19.0
