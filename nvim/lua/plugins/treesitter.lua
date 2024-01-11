@@ -1,17 +1,28 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
-        opts = {
-            ensure_installed = {
-                "c",
-                "lua",
-                "vim",
+        config = function()
+            require("nvim-treesitter.configs").setup({
+                ensure_installed = {
+                    "c",
+                    "lua",
+                    "vim",
 
-                "javascript"
-            },
-            highlight = {
-                enable = false,
-            },
-        }
+                    "markdown",
+
+                    "rust",
+
+                    "javascript",
+                    "html"
+                },
+                highlight = {
+                    enable = true,
+                    -- additional_vim_regex_highlighting = true
+                },
+                indent = {
+                    enable = true
+                }
+            })
+        end
     }
 }
