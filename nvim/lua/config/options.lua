@@ -20,6 +20,7 @@ opt.smartcase = true
 -- Appearance
 opt.termguicolors = true
 opt.signcolumn = "yes:1"
+opt.scrolloff = 5
 
 -- Clipboard
 opt.clipboard:append("unnamedplus")
@@ -27,9 +28,12 @@ opt.clipboard:append("unnamedplus")
 -- Line Wrapping
 opt.wrap = false
 
--- Basic Styling
+-- Basic Style
 vim.api.nvim_set_hl(0, 'Comment', { italic=true })
-vim.opt.fillchars:append { eob = " " }
+vim.opt.fillchars =  { eob = " " }
+
+-- Fold Style
+vim.opt.fillchars:append { foldopen = "", foldsep = " ", foldclose = "" }
 
 -- Providers
 vim.g.python3_host_prog = "/usr/bin/python3"
