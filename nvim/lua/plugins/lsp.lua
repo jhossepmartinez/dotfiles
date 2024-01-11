@@ -1,9 +1,11 @@
+-- Mason lspconfig names
 local lsp_servers = {
     "lua_ls",
     "vimls",
 
     "pyright",
     "clangd",
+    "rust_analyzer",
 
     "tsserver",
     "html",
@@ -17,7 +19,6 @@ return {
     {
         "williamboman/mason-lspconfig.nvim",
         config = function()
-
             require("mason").setup()
             require("mason-lspconfig").setup({
                 ensure_installed = lsp_servers
@@ -47,5 +48,11 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
+        -- Diable inline diagnostics
+        config = function()
+            vim.diagnostic.config({
+                virtual_text = true
+            })
+        end
     }
 }
