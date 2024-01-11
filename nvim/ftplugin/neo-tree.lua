@@ -1,1 +1,1 @@
--- vim.opt.fillchars:append { eob = " " }
+vim.opt_local.fillchars:append { eob = " " }
