@@ -1,4 +1,86 @@
 return {
+    -- Lualine
+    {
+        "nvim-lualine/lualine.nvim",
+        lazy = false,
+        config = function()
+            local colors = {
+                black        = '#000000',
+                white        = '#f8efd8',
+                red          = '#fb4934',
+                green        = '#053230',
+                blue         = '#337591',
+                darkblue     = "#13324d",
+                yellow       = '#fe8019',
+                gray         = '#8c9396',
+                darkgray     = '#3c3836',
+                lightgray    = '#d3dde2',
+                inactivegray = '#7c6f64',
+                lightyellow  = "#969c46",
+                lightrose    = "#cb7e8c",
+                rose         = "#d7c4ca",
+                none         = 'none'
+            }
+            local themes = {
+                normal = {
+                    a = { bg = colors.lightgray, fg = colors.black, gui = 'bold'},
+                    b = { bg = colors.darkblue, fg = colors.white },
+                    c = { bg = colors.none, fg = colors.lightgray }
+                },
+                insert = {
+                    a = { bg = colors.red, fg = colors.black, gui = 'bold'},
+                    b = { bg = colors.lightgray, fg = colors.white },
+                    c = { bg = colors.none, fg = colors.lightgray }
+                },
+                visual = {
+                    a = { bg = colors.lightrose, fg = colors.black, gui = 'bold'},
+                    b = { bg = colors.inactivegray, fg = colors.white },
+                    c = { bg = colors.none, fg = colors.lightgray }
+                },
+                replace = {
+                    a = { bg = colors.red, fg = colors.black, gui = 'bold'},
+                    b = { bg = colors.lightgray, fg = colors.white },
+                    c = { bg = colors.none, fg = colors.lightgray }
+                },
+                command = {
+                    a = { bg = colors.green, fg = colors.black, gui = 'bold'},
+                    b = { bg = colors.lightgray, fg = colors.white },
+                    c = { bg = colors.none, fg = colors.lightgray }
+                },
+                inactive = {
+                    a = { bg = colors.darkgray, fg = colors.gray, gui = 'bold'},
+                    b = { bg = colors.darkgray, fg = colors.gray },
+                    c = { bg = colors.none, fg = colors.lightgray }
+                }
+            }
+            -- vim.cmd("hi DiagnosticError1 guifg=#9e4435 guibg=#448eb4")
+            require("lualine").setup({
+                options = {
+                    icons_enabled = true,
+                    disabled_filetypes = { "neo-tree" },
+                    theme = themes,
+                    -- globalstatus = true,
+                    component_separators = { left = '', right = ''},
+                    section_separators = { left = '', right = ''}
+                },
+                sections = {
+                    lualine_b = {
+                        "branch",
+                        {
+                            "diagnostics",
+                            diagnostics_color = {
+                                error = { fg="#c45441" }, -- Changes diagnostics' error color.
+                                warn  = { fg="#e1d03e" }, -- Changes diagnostics' warn color.
+                                info  = { fg="#9e4435" }, -- Changes diagnostics' info color.
+                                hint  = { fg="#b9c156" }  -- Changes diagnostics' hint color.
+                            },
+                        },
+                    }
+                }
+            })
+        end
+    },
+
     -- Neotree
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -41,7 +123,7 @@ return {
                         filetype = "neo-tree",
                         text = "NeoTree",
                         text_align = "left",
-                        separator = "|",
+                        separator = "│",
                         highlight = "Directory"
                     }
                 }
@@ -59,11 +141,13 @@ return {
                     bg = "",
                     fg = ""
                 },
-                trunc_marker = { -- Arrows that appear when over max width
+                trunc_marker = {
                     bg = "",
                     fg = ""
                 },
-                offset_separator = { -- Title offset
+                offset_separator = {
+                    bg = "",
+                    -- fg = ""
                 },
                 indicator_visible = {
                     bg = "",
@@ -81,18 +165,5 @@ return {
         }
     },
 
-    -- Lualine
-    {
-        "nvim-lualine/lualine.nvim",
-        lazy = false,
-        config = function()
-            require("lualine").setup({
-                options = {
-                    icons_enabled = true,
-                    disabled_filetypes = { "neo-tree" },
-                }
-            })
-        end
-    }
 }
 
