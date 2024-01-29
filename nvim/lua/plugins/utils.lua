@@ -4,7 +4,11 @@ return {
         config = function()
             require("colorizer").setup({
                 '*';
-                css = { rgb_fn = true; names = true; };
+                css = {
+                    rgb_fn = true,
+                    hsl_fn = true,
+                    names = true
+                }
             })
         end
     },
