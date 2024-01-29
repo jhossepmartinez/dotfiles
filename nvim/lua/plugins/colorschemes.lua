@@ -1,7 +1,85 @@
 return {
     {
-        "folke/tokyonight.nvim",
+        "embark-theme/vim",
+        name = "embark"
+    },
+    {
+        "AustinMay1/Serendipity.nvim",
+        -- lazy = false,
+        name = "serendipity",
+        -- branch = "main"
+    },
+    {
+        "techtuner/aura-neovim"
+    },
+    {
+        "getomni/neovim",
+        name = "omni",
+        branch = "main"
+    },
+    {
+        "talha-akram/noctis.nvim"
+    },
+    {
+        "Mofiqul/dracula.nvim",
+        lazy = false,
+        opts = {
+            transparent_bg = true
+        }
+    },
+    {
+
+        "lalitmee/cobalt2.nvim",
+        dependencies = { "tjdevries/colorbuddy.nvim" },
+        init = function()
+            require("colorbuddy").colorscheme("cobalt2")
+        end
+    },
+    {
+        "challenger-deep-theme/vim"
+    },
+    {
+        "cocopon/iceberg.vim"
+    },
+    {
+        "danishprakash/vim-yami",
         lazy = false
+    },
+    {
+        "uloco/bluloco.nvim",
+        lazy = false,
+        dependencies = {
+            "rktjmp/lush.nvim"
+        }
+    },
+    {
+        "navarasu/onedark.nvim",
+        lazy = false,
+        config = function()
+            require("onedark").setup({
+                transparent = true,
+                term_colors = true,
+                style = "dark"
+            })
+        end
+    },
+    {
+        "Koalhack/koalight.nvim"
+    },
+    {
+        "fynnfluegge/monet.nvim",
+        name = "monet",
+        config = function()
+            require("monet").setup({
+                transparent_background = true
+            })
+        end
+    },
+    {
+        "folke/tokyonight.nvim",
+        opts = {
+            transparent = true
+        }
     },
     {
         "rose-pine/neovim",
@@ -20,7 +98,7 @@ return {
     },
     {
         "catppuccin/nvim",
-        lzay = false,
+        -- lzay = false,
         config = function()
             require("catppuccin").setup({
                 transparent_background = true
@@ -52,7 +130,8 @@ return {
         end
     },
     {
-        "lighthaus-theme/vim-lighthaus"
+        "lighthaus-theme/vim-lighthaus",
+        -- lazy = false
     },
     {
         "elvessousa/sobrio"
@@ -76,7 +155,7 @@ return {
     },
     {
         "EdenEast/nightfox.nvim",
-        lazy = false,
+        -- lazy = false,
         opts = {
             options = {
                 transparent = true,
@@ -97,7 +176,7 @@ return {
     },
     {
         "terra-theme/terra-core.nvim",
-        lazy = false,
+        -- lazy = false,
         opts = {
             theme = "fall",
             variant = "night",
@@ -122,21 +201,21 @@ return {
     },
     {
         "ayu-theme/ayu-vim",
-        lazy = false
+        -- lazy = false
     },
     {
         "pineapplegiant/spaceduck",
-        lazy = false
+        -- lazy = false
     },
     {
         "aktersnurra/no-clown-fiesta.nvim",
-        lazy = false,
+        -- lazy = false,
         opts = {
             transparent = true
         }
     },
     {
         "sts10/vim-pink-moon",
-        lazy = false
+        -- lazy = false
     }
 }
