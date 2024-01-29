@@ -6,19 +6,24 @@ function M.transparent_override()
         "LineNr",
         -- "LineNr", "Folded", "NonText",
         -- "SpecialKey", "VertSplit",
-        -- "EndOfBuffer", 'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier', 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer', 'MsgArea', 'CursorLine', 
+        "EndOfBuffer",
+        -- 'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier', 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer', 'MsgArea', 'CursorLine', 
         "SignColumn",
 
         -- Neotree highlights
-        -- "NeoTreeCursorLine",
-        -- "NeoTreeNormal",
-        -- "NeoTreeNormalNC",
+        "NeoTreeCursorLine",
+        "NeoTreeNormal",
+        "NeoTreeNormalNC",
         -- "NeoTreeWinSeparator",
         "WinSeparator",
+        "neotreegitmodified",
 
         -- Fold / Ufo
-        "FoldColumn"
+        "FoldColumn",
 
+        -- Bufferline
+        "Bufferlinefill",
+        "Bufferlinebufferselected"
     }
     for _, highlight in pairs(highlights) do
         vim.cmd('hi ' .. highlight .. ' guibg=none ctermbg=none')
