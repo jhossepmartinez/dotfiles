@@ -9,7 +9,7 @@ function fish_prompt
     set -g __fish_git_prompt_color_branch brmagenta -i # -i Sets italics mode. and uses bright from privded color scheme 
     set -l textcol "#cccccc"
 
-
+    # Fix to make prompt appear at first line
     if test "$history[1]" != "clear" -a "$prompt_active" = "true"
         echo ""
     end
@@ -53,5 +53,6 @@ alias eldf="exa -lh --icons -s type"
 export VIRTUAL_ENV_DISABLE_PROMPT=1 # Disables virtual env prompt
 export PATH="$HOME/.cargo/bin:$PATH" # Patch to run cargo with fish shell
 
-# Node fisher plugin (jorgebucaran/nvm.fish)
+# Node fisher plugin default version (jorgebucaran/nvm.fish)
 set --universal nvm_default_version v18.19.0
+
