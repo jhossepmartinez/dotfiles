@@ -117,6 +117,7 @@ return {
         opts = {
             options = {
                 indicator = { icon = "|" },
+                show_buffer_close_icons = false,
                 separator_style = { "", "" }, -- Removes buffer separators
                 offsets = {
                     {
@@ -129,6 +130,33 @@ return {
                 }
             },
             highlights = {
+                fill = {
+                    bg = ""
+                },
+                background = { -- buffer background
+                    bg = ""
+                },
+                buffer_visible = {
+                    bg = ""
+                },
+                buffer_selected = {
+                    bg = ""
+                },
+                tab = {
+                    bg = "",
+                },
+                tab_selected = {
+                    bg = "",
+                },
+                close_button = {
+                    bg = ""
+                },
+                close_button_visible = {
+                    bg = ""
+                },
+                close_button_selected = {
+                    bg = ""
+                },
                 separator = {
                     bg = "",
                     fg = ""
@@ -156,6 +184,15 @@ return {
                 indicator_selected = {
                     bg = "",
                     fg = ""
+                },
+                modified = {
+                    bg = ""
+                },
+                modified_visible = {
+                    bg = ""
+                },
+                modified_selected = {
+                    bg = ""
                 },
             }
         },
