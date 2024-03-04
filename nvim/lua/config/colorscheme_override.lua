@@ -16,6 +16,8 @@ function M.transparent_override()
 		"DiagnosticWarn",
 		"DiagnosticError",
 		"DiagnosticInfo",
+        "CursorLine",
+        "CursorLineNr",
 
 		-- Neotree highlights
 		"NeoTreeCursorLine",
