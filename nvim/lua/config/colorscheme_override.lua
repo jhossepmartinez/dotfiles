@@ -33,6 +33,10 @@ function M.transparent_override()
 		-- Bufferline
 		"Bufferlinefill",
 		"Bufferlinebufferselected",
+        "BufferLineDuplicateSelected",
+        "BufferLineDuplicateVisible",
+        "BufferLineDuplicate",
+
 	}
 	for _, highlight in pairs(highlights) do
 		vim.cmd("hi " .. highlight .. " guibg=none ctermbg=none")
@@ -51,6 +55,11 @@ end
 function M.colorscheme_default()
 	vim.cmd("hi SignColumn guibg=none ctermbg=none")
 	vim.cmd("hi CursorLine cterm=none")
+    vim.cmd("hi LineNr guifg=#8893a7")
+    vim.cmd("hi CursorLineNr guifg=#f2f2f2")
+    vim.cmd("hi BufferLineDuplicate guifg=#8893a7")
+    vim.cmd("hi BufferLineDuplicateVisible guifg=#8893a7")
+    vim.cmd("hi BufferLineDuplicateSelected guifg=#8893a7")
 	-- vim.cmd("hi Comment guifg=#697281")
 end
 
