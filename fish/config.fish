@@ -7,7 +7,7 @@ end
 # Minimal fish prompt
 function fish_prompt
     set -g __fish_git_prompt_color_branch brmagenta -i # -i Sets italics mode. and uses bright from privded color scheme 
-    set -l textcol "#cccccc"
+    set -l textcol "#f2f2f2"
 
     # Fix to make prompt appear at first line
     if test "$history[1]" != "clear" -a "$prompt_active" = "true"
@@ -41,7 +41,7 @@ end
 
 
 # Default preferences
-set fish_greeting
+set fish_greeting # Disables fish greeting message
 set -l prompt_active false # Check if the first prompt has been written
 
 # List Exa Files aliases
