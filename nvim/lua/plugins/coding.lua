@@ -2,18 +2,31 @@ return {
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
-        opts = {
-            -- indent = { char = "│" },
-            indent = { char = "▏" },
-            scope = {
-                enabled = false
-            },
-            exclude = {
-                filetypes = {
-                    -- "markdown"
-                }
+        config = function()
+            local highlights = {
+                "IndentEven",
+                "IndentOdd",
             }
-        }
+
+            local hooks = require("ibl.hooks")
+
+            hooks.register(hooks.type.HIGHLIGHT_SETUP,function()
+                vim.api.nvim_set_hl(0, "IndentEven", { fg = "#8893a7"})
+                vim.api.nvim_set_hl(0, "IndentOdd", { fg = "#8893a7"})
+            end)
+
+            require("ibl").setup({
+                indent = { char = "▏", highlight = highlights },
+                scope = {
+                    enabled = false
+                },
+                exclude = {
+                    filetypes = {
+                        -- "markdown"
+                    }
+                }
+            })
+        end,
     },
     {
         "kevinhwang91/nvim-ufo",
@@ -36,14 +49,14 @@ return {
             -- Remove depth number indicator
             local builtin = require("statuscol.builtin")
             require("statuscol").setup(
-            {
-                relculright = true,
-                segments = {
-                    {text = { "%s", "" }, click = "v:lua.ScSa" },
-                    {text = { builtin.lnumfunc, " " }, click = "v:lua.ScLa" },
-                    {text = { builtin.foldfunc, " " }, click = "v:lua.ScFa" },
+                {
+                    relculright = true,
+                    segments = {
+                        {text = { "%s", "" }, click = "v:lua.ScSa" },
+                        {text = { builtin.lnumfunc, " " }, click = "v:lua.ScLa" },
+                        {text = { builtin.foldfunc, " " }, click = "v:lua.ScFa" },
+                    }
                 }
-            }
             )
         end,
     },
