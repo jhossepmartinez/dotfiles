@@ -6,7 +6,7 @@ end
 
 # Minimal fish prompt
 function fish_prompt
-    set -g __fish_git_prompt_color_branch brmagenta -i # -i Sets italics mode. and uses bright from privded color scheme 
+    set -g __fish_git_prompt_color_branch "#f05d21" -i # -i Sets italics mode. and uses bright from privded color scheme 
     set -l textcol "#f2f2f2"
 
     # Fix to make prompt appear at first line
