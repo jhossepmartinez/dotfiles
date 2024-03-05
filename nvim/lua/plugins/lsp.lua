@@ -11,7 +11,7 @@ local lsp_servers = {
     "html",
     "cssls",
     "tailwindcss",
-    "emmet_language_server"
+    "emmet_language_server",
 }
 
 return {
@@ -50,8 +50,8 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
-        -- Diable inline diagnostics
         config = function()
+            -- Diable / Enable inline diagnostics
             vim.diagnostic.config({
                 virtual_text = true
             })
