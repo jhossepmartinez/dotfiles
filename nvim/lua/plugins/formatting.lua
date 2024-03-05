@@ -1,3 +1,10 @@
+local formatters = {
+	"stylua",
+	"black",
+	"prettier",
+	"prettierd",
+}
+
 return {
 	{
 		"stevearc/conform.nvim",
@@ -10,7 +17,7 @@ return {
 					javascript = { "prettierd" },
 					javascriptreact = { "prettier" },
 					json = { "prettier" },
-					python = { "black" },
+					-- python = { "black" },
 					-- ckl = { "prettier" },
 				},
 			})
@@ -21,6 +28,16 @@ return {
 				callback = function(args)
 					require("conform").format({ bufnr = args.buf })
 				end,
+			})
+		end,
+	},
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		config = function()
+			require("mason-tool-installer").setup({
+				ensure_installed = {
+					"stylua",
+				},
 			})
 		end,
 	},
