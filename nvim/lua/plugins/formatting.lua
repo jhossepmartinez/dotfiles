@@ -17,6 +17,7 @@ return {
 					javascript = { "prettierd" },
 					javascriptreact = { "prettier" },
 					json = { "prettier" },
+					html = { "prettier" },
 					-- python = { "black" },
 					-- ckl = { "prettier" },
 				},
@@ -37,6 +38,8 @@ return {
 			require("mason-tool-installer").setup({
 				ensure_installed = {
 					"stylua",
+					"prettier",
+					"prettierd",
 				},
 			})
 		end,
