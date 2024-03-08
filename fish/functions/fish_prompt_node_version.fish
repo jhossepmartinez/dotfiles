@@ -14,7 +14,8 @@ function fish_prompt_node_version
     end
 
     if $allow_prompt
-        set -l nodeversioncolor "#539e43"
+        # set -l nodeversioncolor "#539e43"
+        set -l nodeversioncolor "#71c450"
         set_color $nodeversioncolor
         echo -n "󰎙 "(node -v | sed 's/v//')" "
         set_color normal -o
