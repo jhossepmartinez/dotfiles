@@ -11,6 +11,7 @@ return {
 					"markdown",
 
 					"rust",
+					"python",
 
 					"javascript",
 					"html",
