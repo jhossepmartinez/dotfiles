@@ -124,7 +124,7 @@ return {
 						filetype = "neo-tree",
 						text = "NeoTree",
 						text_align = "left",
-						separator = "│",
+						separator = "▏",
 						highlight = "Directory",
 					},
 				},
