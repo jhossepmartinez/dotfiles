@@ -19,7 +19,7 @@ return {
 				highlight = {
 					enable = true,
 					disable = {
-						"markdown",
+						-- "markdown",
 						"lua",
 					},
 					-- additional_vim_regex_highlighting = true
