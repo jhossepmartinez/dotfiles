@@ -22,7 +22,7 @@ return {
 				},
 				exclude = {
 					filetypes = {
-						-- "markdown"
+						"markdown",
 					},
 				},
 			})
