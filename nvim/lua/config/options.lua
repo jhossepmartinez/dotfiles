@@ -29,11 +29,11 @@ opt.clipboard:append("unnamedplus")
 opt.wrap = false
 
 -- Basic Style
-vim.api.nvim_set_hl(0, 'Comment', { italic=true })
-vim.opt.fillchars =  { eob = " " }
+vim.api.nvim_set_hl(0, "Comment", { italic = true })
+vim.opt.fillchars = { eob = " " }
 
 -- Fold Style
-vim.opt.fillchars:append { foldopen = "", foldsep = " ", foldclose = "" }
+vim.opt.fillchars:append({ foldopen = "", foldsep = " ", foldclose = "", vert = "▏" })
 
 -- Providers
 vim.g.python3_host_prog = "/usr/bin/python3"
