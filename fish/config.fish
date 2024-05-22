@@ -19,7 +19,10 @@ function fish_prompt
     set_color $textcol
 
     # Path information prompt
-    echo -n (prompt_pwd)" "
+    echo -n (prompt_pwd | sed 's:[^/]*$::')
+    # set_color --bold magenta
+    echo -n (basename (pwd))" "
+    set_color normal -o
 
     # Git information prompt
     echo -n (fish_git_prompt | tr -d "() ")" "
