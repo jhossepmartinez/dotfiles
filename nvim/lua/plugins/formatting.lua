@@ -14,12 +14,12 @@ return {
 				formatters_by_ft = {
 					lua = { "stylua" },
 					markdown = { "prettierd" },
-					-- javascript = { "prettier" },
-					-- typescript = { "prettier" },
-					-- javascriptreact = { "prettier" },
-					-- json = { "prettier" },
-					-- html = { "prettier" },
-					-- python = { "black" },
+					javascript = { "prettier" },
+					typescript = { "prettier" },
+					javascriptreact = { "prettier" },
+					json = { "prettier" },
+					html = { "prettier" },
+					python = { "black" },
 					-- ckl = { "prettier" },
 				},
 			})
@@ -28,7 +28,11 @@ return {
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				pattern = "*",
 				callback = function(args)
-					require("conform").format({ bufnr = args.buf })
+					local cwd = vim.fn.getcwd()
+					-- Only format if not in work/ directory
+					if not string.match(cwd, "/work/") then
+						require("conform").format({ bufnr = args.buf })
+					end
 				end,
 			})
 		end,
