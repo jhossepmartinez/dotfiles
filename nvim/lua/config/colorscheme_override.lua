@@ -36,6 +36,9 @@ function M.transparent_override()
 		"BufferLineDuplicateSelected",
 		"BufferLineDuplicateVisible",
 		"BufferLineDuplicate",
+
+		-- Cmp
+		-- "Pmenu",
 	}
 	for _, highlight in pairs(highlights) do
 		vim.cmd("hi " .. highlight .. " guibg=none ctermbg=none")
