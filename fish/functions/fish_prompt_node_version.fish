@@ -18,6 +18,13 @@ function fish_prompt_node_version
         set -l nodeversioncolor "#71c450"
         set_color $nodeversioncolor
         echo -n "󰎙 "(node -v | sed 's/v//')" "
+        
+        # Check if its LTS version
+        set -l lts (node -pe process.release.lts)
+        if test -n "$lts"
+            echo -n "LTS"
+        end
+
         set_color normal -o
     end
 end
