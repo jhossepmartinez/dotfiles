@@ -26,6 +26,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = lsp_servers,
 			})
+			local lspconfig = require("lspconfig")
 			-- Automatic setup for lsp servers
 			require("mason-lspconfig").setup_handlers({
 				-- Called for each installed server
@@ -35,7 +36,6 @@ return {
 				end,
 				-- Specific configuration for each server
 				["lua_ls"] = function()
-					local lspconfig = require("lspconfig")
 					lspconfig.lua_ls.setup({
 						settings = {
 							Lua = {
@@ -44,6 +44,12 @@ return {
 								},
 							},
 						},
+					})
+				end,
+
+				["emmet_language_server"] = function()
+					lspconfig.emmet_language_server.setup({
+						filetypes = { "javascript", "javascriptreact" },
 					})
 				end,
 			})
