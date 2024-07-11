@@ -23,4 +23,11 @@ return {
 			})
 		end,
 	},
+	{
+		"maxmx03/solarized.nvim",
+		config = function()
+			vim.o.background = "dark"
+			require("solarized").setup({})
+		end,
+	},
 }
