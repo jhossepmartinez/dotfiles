@@ -5,11 +5,28 @@ return {
 		lazy = false,
 		config = function()
 			local colors = {
+				-- black = "#000000",
+				-- white = "#f8efd8",
+				-- red = "#fb4934",
+				-- green = "#053230",
+				-- blue = "#337591",
+				-- darkblue = "#13324d",
+				-- yellow = "#fe8019",
+				-- gray = "#8c9396",
+				-- darkgray = "#3c3836",
+				-- lightgray = "#d3dde2",
+				-- inactivegray = "#7c6f64",
+				-- lightyellow = "#969c46",
+				-- lightrose = "#cb7e8c",
+				-- rose = "#d7c4ca",
+				-- none = "none",
 				black = "#000000",
 				white = "#f8efd8",
 				red = "#fb4934",
 				green = "#053230",
+				greenish = "#008787",
 				blue = "#337591",
+				bluish = "#4db2dd",
 				darkblue = "#13324d",
 				yellow = "#fe8019",
 				gray = "#8c9396",
@@ -18,41 +35,74 @@ return {
 				inactivegray = "#7c6f64",
 				lightyellow = "#969c46",
 				lightrose = "#cb7e8c",
+				lighterrose = "#ff9eaf",
 				rose = "#d7c4ca",
 				none = "none",
 			}
 			local themes = {
 				normal = {
-					a = { bg = colors.lightgray, fg = colors.black, gui = "bold" },
-					b = { bg = colors.darkblue, fg = colors.white },
+					a = { bg = colors.none, fg = colors.lightgray, gui = "bold" },
+					b = { bg = colors.none, fg = colors.greenish, gui = "italic" },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 				insert = {
-					a = { bg = colors.red, fg = colors.black, gui = "bold" },
-					b = { bg = colors.lightgray, fg = colors.white },
+					a = { bg = colors.none, fg = colors.yellow, gui = "bold" },
+					b = { bg = colors.none, fg = colors.greenish, gui = "italic" },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 				visual = {
-					a = { bg = colors.lightrose, fg = colors.black, gui = "bold" },
-					b = { bg = colors.inactivegray, fg = colors.white },
+					a = { bg = colors.none, fg = colors.lighterrose, gui = "bold" },
+					b = { bg = colors.none, fg = colors.greenish, gui = "italic" },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 				replace = {
-					a = { bg = colors.red, fg = colors.black, gui = "bold" },
-					b = { bg = colors.lightgray, fg = colors.white },
+					a = { bg = colors.none, fg = colors.black, gui = "bold" },
+					b = { bg = colors.none, fg = colors.greenish, gui = "italic" },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 				command = {
-					a = { bg = colors.green, fg = colors.black, gui = "bold" },
-					b = { bg = colors.lightgray, fg = colors.white },
+					a = { bg = colors.none, fg = colors.bluish, gui = "bold" },
+					b = { bg = colors.none, fg = colors.greenish, gui = "italic" },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 				inactive = {
-					a = { bg = colors.darkgray, fg = colors.gray, gui = "bold" },
-					b = { bg = colors.darkgray, fg = colors.gray },
+					a = { bg = colors.none, fg = colors.gray, gui = "bold" },
+					b = { bg = colors.none, fg = colors.greenish, gui = "italic" },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 			}
+			-- local themes = {
+			-- 	normal = {
+			-- 		a = { bg = colors.lightgray, fg = colors.black, gui = "bold" },
+			-- 		b = { bg = colors.darkblue, fg = colors.white },
+			-- 		c = { bg = colors.none, fg = colors.lightgray },
+			-- 	},
+			-- 	insert = {
+			-- 		a = { bg = colors.red, fg = colors.black, gui = "bold" },
+			-- 		b = { bg = colors.lightgray, fg = colors.white },
+			-- 		c = { bg = colors.none, fg = colors.lightgray },
+			-- 	},
+			-- 	visual = {
+			-- 		a = { bg = colors.lightrose, fg = colors.black, gui = "bold" },
+			-- 		b = { bg = colors.inactivegray, fg = colors.white },
+			-- 		c = { bg = colors.none, fg = colors.lightgray },
+			-- 	},
+			-- 	replace = {
+			-- 		a = { bg = colors.red, fg = colors.black, gui = "bold" },
+			-- 		b = { bg = colors.lightgray, fg = colors.white },
+			-- 		c = { bg = colors.none, fg = colors.lightgray },
+			-- 	},
+			-- 	command = {
+			-- 		a = { bg = colors.green, fg = colors.black, gui = "bold" },
+			-- 		b = { bg = colors.lightgray, fg = colors.white },
+			-- 		c = { bg = colors.none, fg = colors.lightgray },
+			-- 	},
+			-- 	inactive = {
+			-- 		a = { bg = colors.darkgray, fg = colors.gray, gui = "bold" },
+			-- 		b = { bg = colors.darkgray, fg = colors.gray },
+			-- 		c = { bg = colors.none, fg = colors.lightgray },
+			-- 	},
+			-- }
 			-- vim.cmd("hi DiagnosticError1 guifg=#9e4435 guibg=#448eb4")
 			require("lualine").setup({
 				options = {
@@ -60,8 +110,10 @@ return {
 					disabled_filetypes = { "neo-tree" },
 					theme = themes,
 					-- globalstatus = true,
+					-- component_separators = { left = "", right = "" },
+					-- section_separators = { left = "", right = "" },
+					-- section_separators = { left = "", right = "" },
 					component_separators = { left = "", right = "" },
-					section_separators = { left = "", right = "" },
 				},
 				sections = {
 					lualine_b = {
@@ -98,7 +150,7 @@ return {
 		opts = {
 			close_if_last_window = true,
 			window = {
-				width = 20,
+				width = 25,
 			},
 			filesystem = {
 				filtered_items = {
@@ -107,6 +159,10 @@ return {
 					hide_hidden = false,
 				},
 			},
+			follow_current_file = {
+				leave_dirs_open = false,
+			},
+			-- use_libuv_file_watcher = true,
 		},
 	},
 
