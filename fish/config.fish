@@ -8,6 +8,7 @@ end
 function fish_prompt
     # set -g __fish_git_prompt_color_branch "#f05d21" -i # -i Sets italics mode. and uses bright from privded color scheme 
     set -g __fish_git_prompt_color_branch "#058f78" -i # -i Sets italics mode. and uses bright from privded color scheme 
+    # set -g __fish_git_prompt_color_branch brred -i # -i Sets italics mode. and uses bright from privded color scheme 
     set -l textcol "#f2f2f2"
 
     # Fix to make prompt appear at first line
@@ -19,9 +20,17 @@ function fish_prompt
     set_color $textcol
 
     # Path information prompt
-    echo -n (prompt_pwd | sed 's:[^/]*$::')
-    # set_color --bold magenta
-    echo -n (basename (pwd))" "
+    set current_dir (pwd)
+    set user_name "/home/$(whoami)"
+    # echo "Current dir:" (pwd)
+    # echo "user name:" $user_name
+    if test "$current_dir" = $user_name
+        echo -n "~"
+    else 
+        echo -n (prompt_pwd | sed 's:[^/]*$::')
+        # set_color --bold magenta
+        echo -n (basename (pwd))" "
+    end
     set_color normal -o
 
     # Git information prompt
@@ -53,8 +62,9 @@ alias eldf="exa -lh --icons -s type"
 # Environment variables
 export VIRTUAL_ENV_DISABLE_PROMPT=1 # Disables virtual env prompt
 export PATH="$HOME/.cargo/bin:$PATH" # Patch to run cargo with fish shell
-export JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64"
-export STUDIO_JDK="/usr/lib/jvm/java-1.11.0-openjdk-amd64"
+export JAVA_HOME="/usr/lib/jvm/java-1.17.0-openjdk-amd64/"
+export STUDIO_JDK="/usr/lib/jvm/java-1.17.0-openjdk-amd64"
+export ANDROID_SDK_ROOT="/usr/lib/android-sdk"
 
 # Node fisher plugin default version (jorgebucaran/nvm.fish)
 set --universal nvm_default_version v18.19.0
