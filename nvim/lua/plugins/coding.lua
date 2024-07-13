@@ -32,7 +32,10 @@ return {
 		"kevinhwang91/nvim-ufo",
 		dependencies = {
 			"kevinhwang91/promise-async",
-			"luukvbaal/statuscol.nvim",
+			{
+				"luukvbaal/statuscol.nvim",
+				commit = "2cdad94", -- After this commit, dev made it depend on Neovim 0.10
+			},
 		},
 		config = function()
 			require("ufo").setup({
