@@ -65,6 +65,7 @@ export PATH="$HOME/.cargo/bin:$PATH" # Patch to run cargo with fish shell
 export JAVA_HOME="/usr/lib/jvm/java-1.17.0-openjdk-amd64/"
 export STUDIO_JDK="/usr/lib/jvm/java-1.17.0-openjdk-amd64"
 export ANDROID_SDK_ROOT="/usr/lib/android-sdk"
+export PATH="$PATH:/opt/nvim/"
 
 # Node fisher plugin default version (jorgebucaran/nvm.fish)
 set --universal nvm_default_version v18.19.0
