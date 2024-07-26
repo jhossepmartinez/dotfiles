@@ -20,5 +20,9 @@ return {
 		config = function()
 			require("mini.pick").setup({})
 		end,
+		keys = {
+			{ "<C-p>", "<cmd>Pick files<CR>" },
+			{ "<C-g>", "<cmd>Pick grep_live<CR>" },
+		},
 	},
 }
