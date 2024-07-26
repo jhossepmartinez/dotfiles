@@ -39,6 +39,13 @@ function M.transparent_override()
 
 		-- Cmp
 		-- "Pmenu",
+
+		-- Diagnostic Status Line
+		"DiagnosticSignError",
+		"DiagnosticSignHint",
+		"DiagnosticSignInfo",
+		"DiagnosticSignOk",
+		"DiagnosticSignWarn",
 	}
 	for _, highlight in pairs(highlights) do
 		vim.cmd("hi " .. highlight .. " guibg=none ctermbg=none")
