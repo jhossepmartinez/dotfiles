@@ -168,97 +168,97 @@ return {
 	},
 
 	-- Bufferline
-	{
-		"akinsho/bufferline.nvim",
-		lazy = false,
-		opts = {
-			options = {
-				indicator = { icon = "|" },
-				show_buffer_close_icons = false,
-				separator_style = { "", "" }, -- Removes buffer separators
-				offsets = {
-					{
-						filetype = "neo-tree",
-						text = "NeoTree",
-						text_align = "left",
-						separator = "▏",
-						highlight = "Directory",
-					},
-				},
-			},
-			highlights = {
-				fill = {
-					bg = "",
-				},
-				background = { -- buffer background
-					bg = "",
-					fg = "#8893a7",
-				},
-				buffer_visible = {
-					bg = "",
-					fg = "#ffffff",
-				},
-				buffer_selected = {
-					bg = "",
-					fg = "#f2f2f2",
-				},
-				tab = {
-					bg = "",
-				},
-				tab_selected = {
-					bg = "",
-				},
-				close_button = {
-					bg = "",
-				},
-				close_button_visible = {
-					bg = "",
-				},
-				close_button_selected = {
-					bg = "",
-				},
-				separator = {
-					bg = "",
-					fg = "",
-				},
-				separator_visible = {
-					bg = "",
-					fg = "",
-				},
-				separator_selected = {
-					bg = "",
-					fg = "",
-				},
-				trunc_marker = {
-					bg = "",
-					fg = "",
-				},
-				offset_separator = {
-					bg = "",
-					-- fg = ""
-				},
-				indicator_visible = {
-					bg = "",
-					fg = "",
-				},
-				indicator_selected = {
-					bg = "",
-					fg = "",
-				},
-				modified = {
-					bg = "",
-				},
-				modified_visible = {
-					bg = "",
-				},
-				modified_selected = {
-					bg = "",
-				},
-			},
-		},
-		keys = {
-			{ "<S-l>", "<cmd>BufferLineCycleNext<CR>" },
-			{ "<S-h>", "<cmd>BufferLineCyclePrev<CR>" },
-		},
-	},
+	-- {
+	-- 	"akinsho/bufferline.nvim",
+	-- 	lazy = false,
+	-- 	opts = {
+	-- 		options = {
+	-- 			indicator = { icon = "|" },
+	-- 			show_buffer_close_icons = false,
+	-- 			separator_style = { "", "" }, -- Removes buffer separators
+	-- 			offsets = {
+	-- 				{
+	-- 					filetype = "neo-tree",
+	-- 					text = "NeoTree",
+	-- 					text_align = "left",
+	-- 					separator = "▏",
+	-- 					highlight = "Directory",
+	-- 				},
+	-- 			},
+	-- 		},
+	-- 		highlights = {
+	-- 			fill = {
+	-- 				bg = "",
+	-- 			},
+	-- 			background = { -- buffer background
+	-- 				bg = "",
+	-- 				fg = "#8893a7",
+	-- 			},
+	-- 			buffer_visible = {
+	-- 				bg = "",
+	-- 				fg = "#ffffff",
+	-- 			},
+	-- 			buffer_selected = {
+	-- 				bg = "",
+	-- 				fg = "#f2f2f2",
+	-- 			},
+	-- 			tab = {
+	-- 				bg = "",
+	-- 			},
+	-- 			tab_selected = {
+	-- 				bg = "",
+	-- 			},
+	-- 			close_button = {
+	-- 				bg = "",
+	-- 			},
+	-- 			close_button_visible = {
+	-- 				bg = "",
+	-- 			},
+	-- 			close_button_selected = {
+	-- 				bg = "",
+	-- 			},
+	-- 			separator = {
+	-- 				bg = "",
+	-- 				fg = "",
+	-- 			},
+	-- 			separator_visible = {
+	-- 				bg = "",
+	-- 				fg = "",
+	-- 			},
+	-- 			separator_selected = {
+	-- 				bg = "",
+	-- 				fg = "",
+	-- 			},
+	-- 			trunc_marker = {
+	-- 				bg = "",
+	-- 				fg = "",
+	-- 			},
+	-- 			offset_separator = {
+	-- 				bg = "",
+	-- 				-- fg = ""
+	-- 			},
+	-- 			indicator_visible = {
+	-- 				bg = "",
+	-- 				fg = "",
+	-- 			},
+	-- 			indicator_selected = {
+	-- 				bg = "",
+	-- 				fg = "",
+	-- 			},
+	-- 			modified = {
+	-- 				bg = "",
+	-- 			},
+	-- 			modified_visible = {
+	-- 				bg = "",
+	-- 			},
+	-- 			modified_selected = {
+	-- 				bg = "",
+	-- 			},
+	-- 		},
+	-- 	},
+	-- 	keys = {
+	-- 		{ "<S-l>", "<cmd>BufferLineCycleNext<CR>" },
+	-- 		{ "<S-h>", "<cmd>BufferLineCyclePrev<CR>" },
+	-- 	},
+	-- },
 }
