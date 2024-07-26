@@ -22,7 +22,7 @@ require("lazy").setup("plugins")
 
 -- Set Colorscheme
 -- vim.g.ayucolor = "mirage"
-vim.cmd("colorscheme embark")
+vim.cmd("colorscheme solarized")
 -- Nisha theme seems nice
 
 -- Transparency override
