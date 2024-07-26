@@ -36,7 +36,6 @@ function M.transparent_override()
 		"BufferLineDuplicateSelected",
 		"BufferLineDuplicateVisible",
 		"BufferLineDuplicate",
-
 		-- Cmp
 		-- "Pmenu",
 
@@ -59,8 +58,9 @@ function M.colorscheme_addon()
 	vim.cmd("hi Comment guifg=#8893a7")
 	vim.cmd("hi LineNr guifg=#c0c8d8")
 	vim.cmd("hi WinSeparator guifg=#c0c8d8")
-	vim.cmd(":hi BufferLineOffsetSeparator guifg=link='WinSeparator'")
+	vim.cmd("hi BufferLineOffsetSeparator guifg=link='WinSeparator'")
 	-- vim.cmd("hi Statement guifg=#9c9fc9")
+	vim.cmd("hi MiniPickMatchCurrent guifg=#eee8d5 guibg=#586e75")
 end
 
 function M.colorscheme_default()
