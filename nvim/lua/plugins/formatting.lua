@@ -15,7 +15,7 @@ return {
 					lua = { "stylua" },
 					markdown = { "prettier" },
 					-- javascript = { "prettier" },
-					-- typescript = { "prettier" },
+					typescript = { "prettier" },
 					-- javascriptreact = { "prettier" },
 					typescriptreact = { "prettier" },
 					scss = { "prettier" },
