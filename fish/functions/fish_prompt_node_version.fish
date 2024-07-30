@@ -21,7 +21,7 @@ function fish_prompt_node_version
         
         # Check if its LTS version
         set -l lts (node -pe process.release.lts)
-        if test -n "$lts"
+        if test -n "$lts" -a "$lts" != "undefined"
             echo -n "LTS"
         end
 
