@@ -73,8 +73,8 @@ return {
 			-- }
 			local themes = {
 				normal = {
-					a = { bg = colors.lightgray, fg = colors.black, gui = "bold" },
-					b = { bg = colors.darkblue, fg = colors.white },
+					a = { bg = "#f9ab00", fg = "#fefad2", gui = "bold" },
+					b = { bg = colors.none, fg = "#a9c45e" },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 				insert = {
@@ -131,6 +131,7 @@ return {
 					},
 				},
 			})
+            vim.cmd("hi lualine_transitional_lualine_a_normal_to_lualine_c_normal guifg=#ffffff")
 		end,
 	},
 
