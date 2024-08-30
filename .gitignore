@@ -3,3 +3,6 @@ capacitor/
 configstore/
 create-next-app-nodejs/
 matplotlib/
+gh/
+
+fish/conf.d/
