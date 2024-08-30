@@ -12,7 +12,7 @@ local lsp_servers = {
 	"cssls",
 	"tailwindcss",
 	"emmet_language_server",
-	-- "eslint",
+	"eslint",
 	-- "angularls",
 }
 
@@ -120,7 +120,7 @@ return {
 					show_header = true,
 					source = "always",
 					border = "none",
-					focusable = false,
+					focusable = true,
 				},
 			})
 		end,
