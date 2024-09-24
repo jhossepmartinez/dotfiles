@@ -2,5 +2,5 @@
 
 Neovim IDE
 
-![terminal](Terminal.png)
+![terminal](terminal.png)
 
