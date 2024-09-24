@@ -12,7 +12,7 @@ function fish_prompt
     set -l textcol "#f2f2f2"
 
     # Fix to make prompt appear at first line
-    if test "$history[1]" != "clear" -a "$prompt_active" = "true"
+    if test "$history[1]" != "clear" -a "$history[1]" != "cl" -a "$prompt_active" = "true"
         echo ""
     end
 
@@ -61,6 +61,8 @@ set -l prompt_active false # Check if the first prompt has been written
 alias els="exa -a -h -1 --icons"
 alias eld="exa -a -h -1 --icons --group-directories-first"
 
+alias cl="clear"
+
 
 # Environment variables
 export VIRTUAL_ENV_DISABLE_PROMPT=1 # Disables virtual env prompt
@@ -69,6 +71,15 @@ export JAVA_HOME="/usr/lib/jvm/java-1.17.0-openjdk-amd64/"
 export STUDIO_JDK="/usr/lib/jvm/java-1.17.0-openjdk-amd64"
 export ANDROID_SDK_ROOT="/usr/lib/android-sdk"
 export PATH="$PATH:/opt/nvim/"
+
+export PATH="$HOME/.local/go/bin:$PATH"
+
+# export GOPATH="$HOME/go"
+# export GOMODCACHE="$GOPATH/pkg/mod"
+
+# export PATH="$PATH:$(go env GOPATH)/bin"
+
+# export PATH="$HOME/go/bin:/usr/local/go/bin:$PATH"
 
 # Node fisher plugin default version (jorgebucaran/nvm.fish)
 # set --universal nvm_default_version v18.19.0
