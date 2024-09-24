@@ -45,6 +45,8 @@ function M.transparent_override()
 		"DiagnosticSignInfo",
 		"DiagnosticSignOk",
 		"DiagnosticSignWarn",
+
+		"Folded",
 	}
 	for _, highlight in pairs(highlights) do
 		vim.cmd("hi " .. highlight .. " guibg=none ctermbg=none")
