@@ -15,6 +15,7 @@ return {
 
 					"javascript",
 					"html",
+					"graphql",
 				},
 				highlight = {
 					enable = true,
