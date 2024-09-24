@@ -7,13 +7,15 @@ local lsp_servers = {
 	"clangd",
 	"rust_analyzer",
 
-	-- "tsserver",
+	"tsserver",
 	"html",
 	"cssls",
 	"tailwindcss",
 	"emmet_language_server",
 	"eslint",
 	-- "angularls",
+	"gopls",
+	"graphql",
 }
 
 return {
@@ -125,4 +127,14 @@ return {
 			})
 		end,
 	},
+	-- {
+	-- 	"kosayoda/nvim-lightbulb",
+	-- 	config = function()
+	-- 		require("nvim-lightbulb").setup({
+	-- 			autocmd = { enabled = true },
+	-- 			sign = { enabled = false },
+	-- 			virtual_text = { enabled = true },
+	-- 		})
+	-- 	end,
+	-- },
 }
