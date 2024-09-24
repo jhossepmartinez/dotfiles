@@ -1,5 +1,8 @@
 return {
 	{
+		"EdenEast/nightfox.nvim",
+	},
+	{
 		"embark-theme/vim",
 		name = "embark",
 		config = function()
