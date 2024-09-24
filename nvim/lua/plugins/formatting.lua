@@ -13,7 +13,7 @@ return {
 			require("conform").setup({
 				formatters_by_ft = {
 					lua = { "stylua" },
-					markdown = { "prettier" },
+					-- markdown = { "prettier" },
 					-- javascript = { "prettier" },
 					-- typescript = { "prettier" },
 					-- javascriptreact = { "prettier" },
