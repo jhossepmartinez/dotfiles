@@ -134,6 +134,9 @@ return {
 
 							"filename",
 							path = 1,
+							fmt = function(str)
+								return str:gsub("/", "  ")
+							end,
 						},
 					},
 				},
