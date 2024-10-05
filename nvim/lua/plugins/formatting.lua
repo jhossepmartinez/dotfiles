@@ -26,7 +26,7 @@ return {
 					-- ckl = { "prettier" },
 				},
 				format_after_save = {
-					lsp_format = "fallback",
+					-- lsp_format = "fallback",
 				},
 			})
 
