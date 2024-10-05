@@ -73,7 +73,7 @@ return {
 			-- }
 			local themes = {
 				normal = {
-					a = { bg = "#f9ab00", fg = "#fefad2", gui = "bold" },
+					a = { bg = "#ad5633", fg = "#fefad2", gui = "bold" },
 					b = { bg = colors.none, fg = "#a9c45e" },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
@@ -83,7 +83,7 @@ return {
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 				visual = {
-					a = { bg = colors.lightrose, fg = colors.black, gui = "bold" },
+					a = { bg = "#955558", fg = "#ffbeb8", gui = "bold" },
 					b = { bg = colors.inactivegray, fg = colors.white },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
@@ -93,7 +93,7 @@ return {
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 				command = {
-					a = { bg = colors.green, fg = colors.black, gui = "bold" },
+					a = { bg = colors.green, fg = "#86a56c", gui = "bold" },
 					b = { bg = colors.lightgray, fg = colors.white },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
@@ -129,9 +129,16 @@ return {
 							},
 						},
 					},
+					lualine_c = {
+						{
+
+							"filename",
+							path = 1,
+						},
+					},
 				},
 			})
-            vim.cmd("hi lualine_transitional_lualine_a_normal_to_lualine_c_normal guifg=#ffffff")
+			vim.cmd("hi lualine_transitional_lualine_a_normal_to_lualine_c_normal guifg=#ffffff")
 		end,
 	},
 
