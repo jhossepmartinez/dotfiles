@@ -61,11 +61,4 @@ return {
 			})
 		end,
 	},
-	{
-		"kdheepak/lazygit.nvim",
-		keys = {
-			{ "<Leader>gg", "<cmd>LazyGit<CR>" },
-		},
-	},
-	{ "junegunn/fzf", build = "./install --bin" },
 }
