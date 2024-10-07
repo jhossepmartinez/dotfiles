@@ -12,10 +12,10 @@ local lsp_servers = {
 	"cssls",
 	"tailwindcss",
 	"emmet_language_server",
-	"eslint",
 	-- "angularls",
-	"gopls",
+	-- "gopls", -- Only install when go is installed
 	"graphql",
+	"prismals",
 }
 
 return {
@@ -54,16 +54,16 @@ return {
 					})
 				end,
 
-				["eslint"] = function()
-					lspconfig.eslint.setup({
-						on_attach = function(client, bufnr)
-							vim.api.nvim_create_autocmd("BufWritePre", {
-								buffer = bufnr,
-								command = "EslintFixAll",
-							})
-						end,
-					})
-				end,
+				-- ["eslint"] = function()
+				-- 	lspconfig.eslint.setup({
+				-- 		on_attach = function(client, bufnr)
+				-- 			vim.api.nvim_create_autocmd("BufWritePre", {
+				-- 				buffer = bufnr,
+				-- 				command = "EslintFixAll",
+				-- 			})
+				-- 		end,
+				-- 	})
+				-- end,
 			}
 			require("mason-lspconfig").setup({ handlers = handlers })
 

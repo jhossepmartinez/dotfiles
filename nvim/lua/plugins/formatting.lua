@@ -1,8 +1,9 @@
 local formatters = {
 	"stylua",
-	"black",
+	-- "black",
 	"prettier",
 	"prettierd",
+	"eslint_d", -- Remember to install eslint_d globally
 }
 
 return {
@@ -18,6 +19,10 @@ return {
 					-- typescript = { "prettier" },
 					-- javascriptreact = { "prettier" },
 					-- typescriptreact = { "prettier" },
+					javascript = { "eslint_d" },
+					typescript = { "eslint_d" },
+					javascriptreact = { "eslint_d" },
+					typescriptreact = { "eslint_d" },
 					scss = { "prettier" },
 					json = { "prettier" },
 					jsonc = { "prettier" },
@@ -47,11 +52,7 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		config = function()
 			require("mason-tool-installer").setup({
-				ensure_installed = {
-					"stylua",
-					"prettier",
-					"prettierd",
-				},
+				ensure_installed = formatters,
 			})
 		end,
 	},

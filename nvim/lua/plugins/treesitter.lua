@@ -16,6 +16,7 @@ return {
 					"javascript",
 					"html",
 					"graphql",
+					"prisma",
 				},
 				highlight = {
 					enable = true,
