@@ -144,7 +144,6 @@ return {
 			vim.cmd("hi lualine_transitional_lualine_a_normal_to_lualine_c_normal guifg=#ffffff")
 		end,
 	},
-
 	-- Neotree
 	{
 		"nvim-neo-tree/neo-tree.nvim",
