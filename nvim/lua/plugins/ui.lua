@@ -84,7 +84,8 @@ return {
 				},
 				visual = {
 					a = { bg = "#955558", fg = "#ffbeb8", gui = "bold" },
-					b = { bg = colors.inactivegray, fg = colors.white },
+					-- b = { bg = colors.inactivegray, fg = colors.white },
+					b = { bg = colors.none, fg = colors.white },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 				replace = {
