@@ -57,7 +57,19 @@ return {
 				},
 			}
 			local function copilotStatus()
-				status = require("module").status
+				local client = vim.lsp.get_active_clients({ name = "copilot" })[1]
+				if client == nil then
+					return " "
+				end
+				if vim.tbl_isempty(client.requests) then
+					return " " -- default icon whilst copilot is idle
+				end
+
+				local spinners = { "⣾", "⣽", "⣻", "⢿", "⡿", "⣟", "⣯", "⣷" }
+				local ms = vim.loop.hrtime() / 1000000
+				local frame = math.floor(ms / 60) % #spinners
+
+				return spinners[frame + 1]
 			end
 			-- vim.cmd("hi DiagnosticError1 guifg=#9e4435 guibg=#448eb4")
 			require("lualine").setup({
@@ -87,13 +99,17 @@ return {
 					},
 					lualine_c = {
 						{
-
 							"filename",
 							path = 1,
 							fmt = function(str)
 								return str:gsub("/", "  ")
 							end,
 						},
+					},
+					lualine_x = {
+						{ copilotStatus },
+						{ "filetype" },
+						{ "fileformat" },
 					},
 				},
 			})
