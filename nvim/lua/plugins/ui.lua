@@ -5,21 +5,6 @@ return {
 		lazy = false,
 		config = function()
 			local colors = {
-				-- black = "#000000",
-				-- white = "#f8efd8",
-				-- red = "#fb4934",
-				-- green = "#053230",
-				-- blue = "#337591",
-				-- darkblue = "#13324d",
-				-- yellow = "#fe8019",
-				-- gray = "#8c9396",
-				-- darkgray = "#3c3836",
-				-- lightgray = "#d3dde2",
-				-- inactivegray = "#7c6f64",
-				-- lightyellow = "#969c46",
-				-- lightrose = "#cb7e8c",
-				-- rose = "#d7c4ca",
-				-- none = "none",
 				black = "#000000",
 				white = "#f8efd8",
 				red = "#fb4934",
@@ -39,38 +24,6 @@ return {
 				rose = "#d7c4ca",
 				none = "none",
 			}
-			-- local themes = {
-			-- 	normal = {
-			-- 		a = { fg = colors.lightgray, gui = "bold" },
-			-- 		b = { fg = colors.greenish, gui = "italic" },
-			-- 		c = { fg = colors.lightgray },
-			-- 	},
-			-- 	insert = {
-			-- 		a = { fg = colors.yellow, gui = "bold" },
-			-- 		b = { fg = colors.greenish, gui = "italic" },
-			-- 		c = { fg = colors.lightgray },
-			-- 	},
-			-- 	visual = {
-			-- 		a = { bg = colors.none, fg = colors.lighterrose, gui = "bold" },
-			-- 		b = { bg = colors.none, fg = colors.greenish, gui = "italic" },
-			-- 		c = { bg = colors.none, fg = colors.lightgray },
-			-- 	},
-			-- 	replace = {
-			-- 		a = { bg = colors.none, fg = colors.black, gui = "bold" },
-			-- 		b = { bg = colors.none, fg = colors.greenish, gui = "italic" },
-			-- 		c = { bg = colors.none, fg = colors.lightgray },
-			-- 	},
-			-- 	command = {
-			-- 		a = { bg = colors.none, fg = colors.bluish, gui = "bold" },
-			-- 		b = { bg = colors.none, fg = colors.greenish, gui = "italic" },
-			-- 		c = { bg = colors.none, fg = colors.lightgray },
-			-- 	},
-			-- 	inactive = {
-			-- 		a = { bg = colors.none, fg = colors.gray, gui = "bold" },
-			-- 		b = { bg = colors.none, fg = colors.greenish, gui = "italic" },
-			-- 		c = { bg = colors.none, fg = colors.lightgray },
-			-- 	},
-			-- }
 			local themes = {
 				normal = {
 					a = { bg = "#ad5633", fg = "#fefad2", gui = "bold" },
@@ -84,7 +37,6 @@ return {
 				},
 				visual = {
 					a = { bg = "#955558", fg = "#ffbeb8", gui = "bold" },
-					-- b = { bg = colors.inactivegray, fg = colors.white },
 					b = { bg = colors.none, fg = colors.white },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
@@ -95,7 +47,7 @@ return {
 				},
 				command = {
 					a = { bg = colors.green, fg = "#86a56c", gui = "bold" },
-					b = { bg = colors.lightgray, fg = colors.white },
+					b = { bg = colors.none, fg = colors.yellow },
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 				inactive = {
