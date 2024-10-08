@@ -56,6 +56,9 @@ return {
 					c = { bg = colors.none, fg = colors.lightgray },
 				},
 			}
+			local function copilotStatus()
+				status = require("module").status
+			end
 			-- vim.cmd("hi DiagnosticError1 guifg=#9e4435 guibg=#448eb4")
 			require("lualine").setup({
 				options = {
