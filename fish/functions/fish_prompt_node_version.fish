@@ -25,6 +25,8 @@ function fish_prompt_node_version
             echo -n "LTS"
         end
 
+        echo -n " "
+
         set_color normal -o
     end
 end

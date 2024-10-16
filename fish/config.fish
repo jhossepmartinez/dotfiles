@@ -22,14 +22,11 @@ function fish_prompt
     # Path information prompt
     set current_dir (pwd)
     set user_name "/home/$(whoami)"
-    # echo "Current dir:" (pwd)
-    # echo "user name:" $user_name
     if test "$current_dir" = $user_name
         echo -n "~"
     else 
-        echo -n (prompt_pwd)
+        echo -n (prompt_pwd)" "
     end
-    # echo -n (pwd)
     set_color normal -o
 
     # Git information prompt
@@ -42,8 +39,7 @@ function fish_prompt
     set_color normal -o
     fish_prompt_env
 
-    echo ""
-    echo "❯ "
+    echo -e "\n❯ "
 
     set -g prompt_active true
 end
