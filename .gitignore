@@ -1,12 +1,8 @@
-lazygit/
-capacitor/
-configstore/
-create-next-app-nodejs/
-matplotlib/
-gh/
+*
+!nvim/
+!fish/
+!tmux/
+!README.md
+!terminal.png
+!.gitignore
 
-go/
-github-copilot/
-help-installs/
-
-fish/conf.d/
