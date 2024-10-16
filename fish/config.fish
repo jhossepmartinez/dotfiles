@@ -27,10 +27,9 @@ function fish_prompt
     if test "$current_dir" = $user_name
         echo -n "~"
     else 
-        echo -n (prompt_pwd | sed 's:[^/]*$::')
-        # set_color --bold magenta
-        echo -n (basename (pwd))" "
+        echo -n (prompt_pwd)
     end
+    # echo -n (pwd)
     set_color normal -o
 
     # Git information prompt
@@ -73,6 +72,7 @@ export ANDROID_SDK_ROOT="/usr/lib/android-sdk"
 export PATH="$PATH:/opt/nvim/"
 
 export PATH="$HOME/.local/go/bin:$PATH"
+
 
 # export GOPATH="$HOME/go"
 # export GOMODCACHE="$GOPATH/pkg/mod"
