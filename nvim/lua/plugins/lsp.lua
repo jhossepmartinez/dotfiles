@@ -16,6 +16,8 @@ local lsp_servers = {
 	-- "gopls", -- Only install when go is installed
 	"graphql",
 	"prismals",
+
+	"jdtls",
 }
 
 return {

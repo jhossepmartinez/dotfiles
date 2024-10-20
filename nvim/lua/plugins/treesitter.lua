@@ -17,6 +17,8 @@ return {
 					"html",
 					"graphql",
 					"prisma",
+
+					"java",
 				},
 				highlight = {
 					enable = true,
