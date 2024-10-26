@@ -9,6 +9,7 @@ return {
 					"vim",
 
 					"markdown",
+					"json",
 
 					"rust",
 					"python",
