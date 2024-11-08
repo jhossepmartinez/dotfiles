@@ -24,7 +24,7 @@ return {
 				mapping = cmp.mapping.preset.insert({
 					["<Tab>"] = cmp.mapping.select_next_item(),
 					["<CR>"] = cmp.mapping.confirm(),
-					-- ["<C-Space>"] = cmp.mapping.complete(),
+					["<C-Space>"] = cmp.mapping.complete(),
 				}),
 				sources = cmp.config.sources({
 					{ name = "luasnip" }, -- For vsnip users.
