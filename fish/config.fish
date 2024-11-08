@@ -58,6 +58,8 @@ alias eld="exa -a -h -1 --icons --group-directories-first"
 
 alias cl="clear"
 
+alias clz="find . -name '*:Zone.Identifier' -type f -delete"
+
 
 # Environment variables
 export VIRTUAL_ENV_DISABLE_PROMPT=1 # Disables virtual env prompt
