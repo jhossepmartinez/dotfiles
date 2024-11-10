@@ -1,4 +1,4 @@
--- Mason lspconfig names
+-- lspconfig names
 local lsp_servers = {
 	"lua_ls",
 	"vimls",
@@ -7,10 +7,11 @@ local lsp_servers = {
 	"clangd",
 	"rust_analyzer",
 
+	"eslint",
 	"tsserver",
 	"html",
 	"cssls",
-	"tailwindcss",
+	-- "tailwindcss",
 	"emmet_language_server",
 	-- "angularls",
 	-- "gopls", -- Only install when go is installed
