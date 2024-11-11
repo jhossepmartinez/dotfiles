@@ -3,7 +3,7 @@ local formatters = {
 	-- "black",
 	"prettier",
 	"prettierd",
-	"eslint_d", -- Remember to install eslint_d globally
+	-- "eslint_d", -- Remember to install eslint_d globally
 }
 
 return {
@@ -19,10 +19,10 @@ return {
 					-- typescript = { "prettier" },
 					-- javascriptreact = { "prettier" },
 					-- typescriptreact = { "prettier" },
-					javascript = { "eslint_d" },
-					typescript = { "eslint_d" },
-					javascriptreact = { "eslint_d" },
-					typescriptreact = { "eslint_d" },
+					-- javascript = { "eslint_d" },
+					-- typescript = { "eslint_d" },
+					-- javascriptreact = { "eslint_d" },
+					-- typescriptreact = { "eslint_d" },
 					scss = { "prettier" },
 					json = { "prettier" },
 					jsonc = { "prettier" },
