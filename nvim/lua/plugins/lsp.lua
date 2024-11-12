@@ -7,7 +7,7 @@ local lsp_servers = {
 	"clangd",
 	"rust_analyzer",
 
-	"eslint",
+	-- "eslint",
 	"tsserver",
 	"html",
 	"cssls",
@@ -52,6 +52,29 @@ return {
 								diagnostics = {
 									globals = { "vim" },
 								},
+							},
+						},
+					})
+				end,
+
+				["eslint"] = function()
+					lspconfig.eslint.setup({
+						on_attach = function(client, bufnr)
+							-- Disable formatting capabilities to prevent autoformatting
+							client.server_capabilities.documentFormattingProvider = false
+							client.server_capabilities.documentRangeFormattingProvider = false
+
+							-- Enable linting only
+							-- You can use `EslintFixAll` manually when needed.
+							vim.api.nvim_create_autocmd("BufWritePre", {
+								buffer = bufnr,
+								command = "EslintFixAll", -- Optional: This will autofix on save if you uncomment it.
+							})
+						end,
+						settings = {
+							validate = "on", -- Enable linting
+							format = {
+								enable = false, -- Disable formatting
 							},
 						},
 					})
