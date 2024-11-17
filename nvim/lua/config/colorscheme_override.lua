@@ -1,14 +1,14 @@
 local M = {}
 function M.transparent_override()
 	local highlights = {
+		-- base
 		"Normal",
 		"NormalNC",
 		"LineNr",
-		-- "LineNr", "Folded", "NonText",
-		-- "SpecialKey", "VertSplit",
 		"EndOfBuffer",
-		-- 'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier', 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer', 'MsgArea', 'CursorLine',
 		"SignColumn",
+		"CursorLine",
+		"CursorLineNr",
 
 		-- Diagnostics
 		"DiagnosticHint",
@@ -16,28 +16,6 @@ function M.transparent_override()
 		"DiagnosticWarn",
 		"DiagnosticError",
 		"DiagnosticInfo",
-		"CursorLine",
-		"CursorLineNr",
-
-		-- Neotree highlights
-		"NeoTreeCursorLine",
-		"NeoTreeNormal",
-		"NeoTreeNormalNC",
-		-- "NeoTreeWinSeparator",
-		"WinSeparator",
-		"neotreegitmodified",
-
-		-- Fold / Ufo
-		"FoldColumn",
-
-		-- Bufferline
-		"Bufferlinefill",
-		"Bufferlinebufferselected",
-		"BufferLineDuplicateSelected",
-		"BufferLineDuplicateVisible",
-		"BufferLineDuplicate",
-		-- Cmp
-		-- "Pmenu",
 
 		-- Diagnostic Status Line
 		"DiagnosticSignError",
@@ -46,7 +24,31 @@ function M.transparent_override()
 		"DiagnosticSignOk",
 		"DiagnosticSignWarn",
 
+		-- @plugin: Neotree
+		"NeoTreeCursorLine",
+		"NeoTreeNormal",
+		"NeoTreeNormalNC",
+		-- "NeoTreeWinSeparator",
+		"WinSeparator",
+		"neotreegitmodified",
+
+		-- @plugin: Fold / Ufo
+		"FoldColumn",
 		"Folded",
+
+		-- @plugin: Bufferline
+		"Bufferlinefill",
+		"Bufferlinebufferselected",
+		"BufferLineDuplicateSelected",
+		"BufferLineDuplicateVisible",
+		"BufferLineDuplicate",
+		-- @plugin: Cmp
+		-- "Pmenu",
+
+		-- plugin: Gitsigns
+		"GitSignsAdd",
+		"GitSignsChange",
+		"GitSignsDelete",
 	}
 	for _, highlight in pairs(highlights) do
 		vim.cmd("hi " .. highlight .. " guibg=none ctermbg=none")
