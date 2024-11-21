@@ -45,10 +45,13 @@ function M.transparent_override()
 		-- @plugin: Cmp
 		-- "Pmenu",
 
-		-- plugin: Gitsigns
+		-- @plugin: Gitsigns
 		"GitSignsAdd",
 		"GitSignsChange",
 		"GitSignsDelete",
+
+		-- @plugin: Mini.pick
+		"MiniPickNormal",
 	}
 	for _, highlight in pairs(highlights) do
 		vim.cmd("hi " .. highlight .. " guibg=none ctermbg=none")
