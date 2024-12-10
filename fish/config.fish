@@ -49,16 +49,15 @@ end
 set fish_greeting # Disables fish greeting message
 set -l prompt_active false # Check if the first prompt has been written
 
+alias cl="clear"
+
 # List Exa Files aliases
-# alias ela="exa -la --icons"
-# alias els="exa -lh --icons"
-# alias eldf="exa -lh --icons -s type"
 alias els="exa -a -h -1 --icons"
 alias eld="exa -a -h -1 --icons --group-directories-first"
 
-alias cl="clear"
-
+# Utilities
 alias clz="find . -name '*:Zone.Identifier' -type f -delete"
+alias avef="source ./venv/bin/activate.fish"
 
 
 # Environment variables
@@ -71,15 +70,5 @@ export PATH="$PATH:/opt/nvim/"
 
 export PATH="$HOME/.local/go/bin:$PATH"
 
-
-# export GOPATH="$HOME/go"
-# export GOMODCACHE="$GOPATH/pkg/mod"
-
-# export PATH="$PATH:$(go env GOPATH)/bin"
-
-# export PATH="$HOME/go/bin:/usr/local/go/bin:$PATH"
-
-# Node fisher plugin default version (jorgebucaran/nvm.fish)
-# set --universal nvm_default_version v18.19.0
 set --universal nvm_default_version v20.16.0
 
