@@ -15,6 +15,7 @@ return {
 					"python",
 
 					"javascript",
+					"typescript",
 					"html",
 					"graphql",
 					"prisma",
@@ -23,10 +24,10 @@ return {
 				},
 				highlight = {
 					enable = true,
-					disable = {
-						-- "markdown",
-						-- "lua",
-					},
+					-- disable = {
+					-- 	"markdown",
+					-- 	-- "lua",
+					-- },
 					-- additional_vim_regex_highlighting = true,
 				},
 				indent = {

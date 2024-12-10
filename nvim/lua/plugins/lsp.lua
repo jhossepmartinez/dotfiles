@@ -11,7 +11,7 @@ local lsp_servers = {
 	"tsserver",
 	"html",
 	"cssls",
-	-- "tailwindcss",
+	"tailwindcss",
 	"emmet_language_server",
 	-- "angularls",
 	-- "gopls", -- Only install when go is installed

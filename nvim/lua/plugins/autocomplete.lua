@@ -16,6 +16,11 @@ return {
 			local cmp = require("cmp")
 			require("luasnip.loaders.from_vscode").lazy_load()
 			cmp.setup({
+				window = {
+					completion = {
+						winhighlight = "Normal:CmpNormal,CursorLine:CmpSelected",
+					},
+				},
 				snippet = {
 					expand = function(args)
 						require("luasnip").lsp_expand(args.body)
@@ -34,7 +39,7 @@ return {
 				}),
 				formatting = {
 					format = lspkind.cmp_format({
-						mode = "symbol",
+						mode = "text_symbol",
 						maxwidth = 50,
 						ellipsis_char = "...", -- filler char if popup exceeds maxwidth
 					}),
