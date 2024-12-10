@@ -49,6 +49,9 @@ function M.transparent_override()
 		"GitSignsAdd",
 		"GitSignsChange",
 		"GitSignsDelete",
+		"GitSignsStagedAdd",
+		"GitSignsStagedChange",
+		"GitSignsStagedDelete",
 
 		-- @plugin: Mini.pick
 		"MiniPickNormal",
@@ -64,6 +67,9 @@ function M.colorscheme_addon()
 	-- vim.cmd("hi Normal guifg=#98a2b0")
 	-- vim.cmd("hi Comment guifg=#8893a7")
 	vim.cmd("hi LineNr guifg=#c0c8d8")
+	vim.cmd("hi CmpNormal guibg=#552316")
+	vim.cmd("hi CmpItemAbbr guifg=#f8eecb")
+	vim.cmd("hi CmpSelected guifg=#93b189 guibg=#652b22")
 	vim.cmd("hi WinSeparator guifg=#c0c8d8")
 	vim.cmd("hi BufferLineOffsetSeparator guifg=link='WinSeparator'")
 	-- vim.cmd("hi Statement guifg=#9c9fc9")
