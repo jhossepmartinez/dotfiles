@@ -46,18 +46,21 @@ end
 
 
 # Default preferences
-set fish_greeting # Disables fish greeting message
-set -l prompt_active false # Check if the first prompt has been written
+set fish_greeting
 
-alias cl="clear"
-
-# List Exa Files aliases
+# Exa Plugin aliases
 alias els="exa -a -h -1 --icons"
 alias eld="exa -a -h -1 --icons --group-directories-first"
 
 # Utilities
+alias cl="clear"
 alias clz="find . -name '*:Zone.Identifier' -type f -delete"
 alias avef="source ./venv/bin/activate.fish"
+
+# functions
+function mkcd
+    mkdir -p $argv[1]; and cd $argv[1]
+end
 
 
 # Environment variables
@@ -72,3 +75,6 @@ export PATH="$HOME/.local/go/bin:$PATH"
 
 set --universal nvm_default_version v20.16.0
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/sultan/google-cloud-sdk/path.fish.inc' ]; . '/home/sultan/google-cloud-sdk/path.fish.inc'; end
