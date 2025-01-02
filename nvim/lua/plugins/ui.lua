@@ -145,6 +145,9 @@ return {
 			follow_current_file = {
 				leave_dirs_open = false,
 			},
+			default_component_configs = {
+				icon = {},
+			},
 			-- use_libuv_file_watcher = true,
 		},
 	},
