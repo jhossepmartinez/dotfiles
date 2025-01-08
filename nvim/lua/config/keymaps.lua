@@ -19,4 +19,7 @@ keymap("n", "k", "gk", { noremap = true, silent = true })
 -- Global diagnostics
 keymap("n", "[d", vim.diagnostic.goto_prev)
 keymap("n", "]d", vim.diagnostic.goto_next)
+
+-- Lsp
 keymap("n", "ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+keymap("n", "<Leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
