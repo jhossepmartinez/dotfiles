@@ -12,7 +12,7 @@ return {
 				},
 			})
 		end,
-		enabled = false,
+		-- enabled = false,
 	},
 	{
 		"supermaven-inc/supermaven-nvim",
@@ -24,5 +24,6 @@ return {
 				log_level = "info",
 			})
 		end,
+		enabled = false,
 	},
 }
