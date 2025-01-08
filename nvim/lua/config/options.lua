@@ -1,7 +1,7 @@
-local opt = vim.opt -- for conciseness
+local opt = vim.opt
 
 -- Line Number
-opt.relativenumber = true -- show relative line numbers
+opt.relativenumber = true
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 opt.cursorline = true
 
