@@ -4,6 +4,7 @@ local formatters = {
 	"prettier",
 	"prettierd",
 	-- "eslint_d", -- Remember to install eslint_d globally
+	"php-cs-fixer",
 }
 
 return {
@@ -28,10 +29,21 @@ return {
 					jsonc = { "prettier" },
 					html = { "prettier" },
 					python = { "black" },
+					php = { "php_cs_fixer" },
 					-- ckl = { "prettier" },
 				},
 				format_after_save = {
 					lsp_format = "fallback",
+				},
+				formatters = {
+					php_cs_fixer = {
+						command = "php-cs-fixer",
+						args = {
+							"fix",
+							"$FILENAME",
+							"--config=.php-cs-fixer.php",
+						},
+					},
 				},
 			})
 

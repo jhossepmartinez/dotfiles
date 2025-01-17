@@ -70,6 +70,7 @@ export JAVA_HOME="/usr/lib/jvm/java-1.17.0-openjdk-amd64/"
 export STUDIO_JDK="/usr/lib/jvm/java-1.17.0-openjdk-amd64"
 export ANDROID_SDK_ROOT="/usr/lib/android-sdk"
 export PATH="$PATH:/opt/nvim/"
+export PATH="/home/sultan/.config/herd-lite/bin:$PATH"
 
 export PATH="$HOME/.local/go/bin:$PATH"
 

@@ -19,6 +19,7 @@ local lsp_servers = {
 	"prismals",
 
 	"jdtls",
+	"phpactor",
 }
 
 return {
