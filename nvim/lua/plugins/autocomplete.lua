@@ -17,6 +17,7 @@ return {
 			local cmp = require("cmp")
 			require("luasnip.loaders.from_vscode").lazy_load()
 			cmp.setup({
+				preselect = cmp.PreselectMode.Item,
 				window = {
 					completion = {
 						winhighlight = "Normal:CmpNormal,CursorLine:CmpSelected",
@@ -45,6 +46,9 @@ return {
 						maxwidth = 50,
 						ellipsis_char = "...", -- filler char if popup exceeds maxwidth
 					}),
+				},
+				completion = {
+					completeopt = "menu,menuone,noinsert",
 				},
 			})
 		end,
