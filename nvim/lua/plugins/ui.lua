@@ -14,12 +14,12 @@ return {
 				blue = "#337591",
 				bluish = "#4db2dd",
 				darkblue = "#13324d",
-				yellow = "#fe8019",
 				gray = "#8c9396",
 				darkgray = "#3c3836",
 				lightgray = "#d3dde2",
 				inactivegray = "#7c6f64",
-				lightyellow = "#969c46",
+				lightyellow = "#916700",
+				yellow = "#715306",
 				lightrose = "#cb7e8c",
 				lighterrose = "#ff9eaf",
 				rose = "#d7c4ca",
@@ -97,7 +97,7 @@ return {
 				},
 				sections = {
 					lualine_b = {
-						{ "branch" },
+						{ "branch", color = { bg = colors.none } },
 						{
 							"diagnostics",
 							always_visible = false,
@@ -108,7 +108,13 @@ return {
 								hint = { fg = "#b9c156" }, -- Changes diagnostics' hint color.
 							},
 						},
-						{ "filetype", icon_only = true, padding = { right = 0, left = 1 } },
+					},
+					lualine_c = {
+						{
+							"filetype",
+							icon_only = true,
+							padding = { right = 0, left = 1 },
+						},
 						{
 							"filename",
 							path = 1,
@@ -120,7 +126,6 @@ return {
 							padding = 0,
 						},
 					},
-					lualine_c = {},
 					lualine_x = {},
 					lualine_y = {
 						{
