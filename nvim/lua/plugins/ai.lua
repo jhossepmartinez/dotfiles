@@ -12,7 +12,7 @@ return {
 				},
 			})
 		end,
-		enabled = false,
+		enabled = true,
 	},
 	{
 		"supermaven-inc/supermaven-nvim",
@@ -25,5 +25,11 @@ return {
 			})
 		end,
 		enabled = false,
+	},
+	{
+		"jhossepmartinez/supermaven-status.nvim",
+		dependencies = {
+			"supermaven-inc/supermaven-nvim",
+		},
 	},
 }

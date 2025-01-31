@@ -10,6 +10,7 @@ return {
 				red = "#fb4934",
 				green = "#053230",
 				greenish = "#008787",
+				lightgreen = "#a9c45e",
 				blue = "#337591",
 				bluish = "#4db2dd",
 				darkblue = "#13324d",
@@ -27,33 +28,40 @@ return {
 			local themes = {
 				normal = {
 					a = { bg = "#ad5633", fg = "#fefad2", gui = "bold" },
-					b = { bg = colors.none, fg = "#a9c45e" },
+					b = { bg = colors.none, fg = colors.lightgreen },
 					c = { bg = colors.none, fg = colors.lightgray },
+					y = { bg = colors.none, fg = colors.none },
+					z = { bg = colors.none, fg = colors.none },
 				},
 				insert = {
 					a = { bg = colors.red, fg = colors.black, gui = "bold" },
-					b = { bg = colors.lightgray, fg = colors.white },
+					b = { bg = colors.none, fg = colors.lightgreen },
 					c = { bg = colors.none, fg = colors.lightgray },
+					y = { bg = colors.none, fg = colors.none },
 				},
 				visual = {
 					a = { bg = "#955558", fg = "#ffbeb8", gui = "bold" },
-					b = { bg = colors.none, fg = colors.white },
+					b = { bg = colors.none, fg = colors.lightgreen },
 					c = { bg = colors.none, fg = colors.lightgray },
+					y = { bg = colors.none, fg = colors.none },
 				},
 				replace = {
 					a = { bg = colors.red, fg = colors.black, gui = "bold" },
-					b = { bg = colors.lightgray, fg = colors.white },
+					b = { bg = colors.none, fg = colors.lightgreen },
 					c = { bg = colors.none, fg = colors.lightgray },
+					y = { bg = colors.none, fg = colors.lightgray },
 				},
 				command = {
 					a = { bg = colors.green, fg = "#86a56c", gui = "bold" },
-					b = { bg = colors.none, fg = colors.yellow },
+					b = { bg = colors.none, fg = colors.lightgreen },
 					c = { bg = colors.none, fg = colors.lightgray },
+					y = { bg = colors.none, fg = colors.lightgray },
 				},
 				inactive = {
 					a = { bg = colors.darkgray, fg = colors.gray, gui = "bold" },
-					b = { bg = colors.darkgray, fg = colors.gray },
+					b = { bg = colors.none, fg = colors.lightgreen },
 					c = { bg = colors.none, fg = colors.lightgray },
+					y = { bg = colors.none, fg = colors.lightgray },
 				},
 			}
 			local function copilotStatus()
@@ -71,6 +79,7 @@ return {
 
 				return spinners[frame + 1]
 			end
+
 			-- vim.cmd("hi DiagnosticError1 guifg=#9e4435 guibg=#448eb4")
 			require("lualine").setup({
 				options = {
@@ -80,15 +89,18 @@ return {
 					-- globalstatus = true,
 					-- section_separators = { left = "", right = "" },
 					-- section_separators = { left = "", right = "" },
-					section_separators = { left = "", right = "" },
+					-- section_separators = { left = "", right = "" },
+					-- section_separators = { left = "", right = "•" },
+					section_separators = { left = "", right = "" },
 					-- component_separators = { left = "", right = "" },
-					component_separators = { left = "•", right = "•" },
+					component_separators = { left = "", right = "" },
 				},
 				sections = {
 					lualine_b = {
-						"branch",
+						{ "branch" },
 						{
 							"diagnostics",
+							always_visible = false,
 							diagnostics_color = {
 								error = { fg = "#c45441" }, -- Changes diagnostics' error color.
 								warn = { fg = "#e1d03e" }, -- Changes diagnostics' warn color.
@@ -96,21 +108,30 @@ return {
 								hint = { fg = "#b9c156" }, -- Changes diagnostics' hint color.
 							},
 						},
-					},
-					lualine_c = {
+						{ "filetype", icon_only = true, padding = { right = 0, left = 1 } },
 						{
 							"filename",
 							path = 1,
-							fmt = function(str)
-								return str:gsub("/", "  ")
-							end,
+							color = { fg = colors.lightgray, bg = colors.none },
+							-- fmt = function(str)
+							-- 	-- return str:gsub("/", "  ")
+							-- 	return str:gsub("/", "  ")
+							-- end,
+							padding = 0,
 						},
 					},
-					lualine_x = {
+					lualine_c = {},
+					lualine_x = {},
+					lualine_y = {
+						{
+							function()
+								return require("supermaven-status").status_string()
+							end,
+						},
 						{ copilotStatus },
-						{ "filetype" },
-						{ "fileformat" },
+						-- { "fileformat" },
 					},
+					lualine_z = {},
 				},
 			})
 			vim.cmd("hi lualine_transitional_lualine_a_normal_to_lualine_c_normal guifg=#ffffff")
