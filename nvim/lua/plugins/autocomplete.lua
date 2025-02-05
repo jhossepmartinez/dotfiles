@@ -19,9 +19,11 @@ return {
 			cmp.setup({
 				preselect = cmp.PreselectMode.Item,
 				window = {
-					completion = {
-						winhighlight = "Normal:CmpNormal,CursorLine:CmpSelected",
-					},
+					completion = cmp.config.window.bordered({
+						-- border = { "", "", "", "", "", "", "", "▌" },
+						border = { "", "", "", "", "", "", "", "" },
+						winhighlight = "Normal:CmpNormal,CursorLine:CmpSelected,FloatBorder:CmpNormal",
+					}),
 				},
 				snippet = {
 					expand = function(args)
