@@ -91,18 +91,12 @@ return {
 					-- section_separators = { left = "", right = "" },
 					-- section_separators = { left = "", right = "" },
 					-- section_separators = { left = "", right = "•" },
-					section_separators = { left = "", right = "" },
+					section_separators = { left = "", right = "" },
 					-- component_separators = { left = "", right = "" },
 					component_separators = { left = "", right = "" },
 				},
 				sections = {
 					lualine_b = {
-						{
-							"buffers",
-							cond = function()
-								return false
-							end,
-						},
 						{ "branch", color = { fg = colors.lightgreen, bg = colors.none } },
 						{
 							"diagnostics",
@@ -142,7 +136,6 @@ return {
 							end,
 						},
 						{ copilotStatus },
-						-- { "fileformat" },
 					},
 					lualine_z = {},
 				},
@@ -159,7 +152,6 @@ return {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
-			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 		},
 		keys = {
 			{ "<Leader>nm", "<cmd>Neotree toggle<CR>" },
@@ -182,7 +174,6 @@ return {
 			default_component_configs = {
 				icon = {},
 			},
-			-- use_libuv_file_watcher = true,
 		},
 	},
 
