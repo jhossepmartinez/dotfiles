@@ -16,7 +16,7 @@ return {
 
 			-- Only one of these is needed.
 			"nvim-telescope/telescope.nvim", -- optional
-			"ibhagwan/fzf-lua", -- optional
+			-- "ibhagwan/fzf-lua", -- optional
 			"echasnovski/mini.pick", -- optional
 		},
 		config = true,
@@ -27,6 +27,17 @@ return {
 			require("gitsigns").setup({
 				current_line_blame = true,
 			})
+		end,
+	},
+	{
+		"pwntester/octo.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			require("octo").setup()
 		end,
 	},
 }
