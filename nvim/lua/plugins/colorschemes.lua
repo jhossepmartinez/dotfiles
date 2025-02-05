@@ -30,7 +30,9 @@ return {
 		"maxmx03/solarized.nvim",
 		config = function()
 			vim.o.background = "dark"
-			require("solarized").setup({})
+			require("solarized").setup({
+				variant = "winter", -- "spring" | "summer" | "autumn" | "winter" (default)
+			})
 		end,
 	},
 	{ "rose-pine/neovim", name = "rose-pine" },

@@ -74,6 +74,7 @@ function M.colorscheme_addon()
 	vim.cmd("hi BufferLineOffsetSeparator guifg=link='WinSeparator'")
 	-- vim.cmd("hi Statement guifg=#9c9fc9")
 	vim.cmd("hi MiniPickMatchCurrent guifg=#eee8d5 guibg=#586e75")
+	vim.cmd("hi GitSignsAdd guifg=#859900")
 end
 
 function M.colorscheme_default()

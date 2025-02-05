@@ -27,6 +27,12 @@ return {
 			require("gitsigns").setup({
 				current_line_blame = true,
 			})
+			-- keymaps
+			local gitsigns = require("gitsigns")
+			local keymap = vim.keymap.set
+			keymap("n", "<Leader>rh", function()
+				gitsigns.reset_hunk()
+			end)
 		end,
 	},
 	{
