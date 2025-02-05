@@ -16,7 +16,8 @@ return {
 			end)
 
 			require("ibl").setup({
-				indent = { char = "▏", highlight = highlights },
+				-- indent = { char = "▏", highlight = highlights },
+				indent = { char = "┆", highlight = highlights },
 				scope = {
 					enabled = false,
 				},
