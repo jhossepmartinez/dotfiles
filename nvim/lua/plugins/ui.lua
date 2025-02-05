@@ -97,15 +97,21 @@ return {
 				},
 				sections = {
 					lualine_b = {
+						{
+							"buffers",
+							cond = function()
+								return false
+							end,
+						},
 						{ "branch", color = { bg = colors.none } },
 						{
 							"diagnostics",
 							always_visible = false,
 							diagnostics_color = {
-								error = { fg = "#c45441" }, -- Changes diagnostics' error color.
-								warn = { fg = "#e1d03e" }, -- Changes diagnostics' warn color.
-								info = { fg = "#9e4435" }, -- Changes diagnostics' info color.
-								hint = { fg = "#b9c156" }, -- Changes diagnostics' hint color.
+								error = { fg = "#c45441", bg = "none" }, -- Changes diagnostics' error color.
+								warn = { fg = "#e1d03e", bg = "none" }, -- Changes diagnostics' warn color.
+								info = { fg = "#9e4435", bg = "none" }, -- Changes diagnostics' info color.
+								hint = { fg = "#b9c156", bg = "none" }, -- Changes diagnostics' hint color.
 							},
 						},
 					},
@@ -114,16 +120,18 @@ return {
 							"filetype",
 							icon_only = true,
 							padding = { right = 0, left = 1 },
+							always_visible = false,
+							color = { bg = colors.none },
 						},
 						{
 							"filename",
 							path = 1,
-							color = { fg = colors.lightgray, bg = colors.none },
+							color = { bg = colors.none },
 							-- fmt = function(str)
 							-- 	-- return str:gsub("/", "  ")
 							-- 	return str:gsub("/", "  ")
 							-- end,
-							padding = 0,
+							padding = { right = 0 },
 						},
 					},
 					lualine_x = {},
