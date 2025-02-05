@@ -28,8 +28,8 @@ return {
 			local themes = {
 				normal = {
 					a = { bg = "#ad5633", fg = "#fefad2", gui = "bold" },
-					b = { bg = colors.none, fg = colors.lightgreen },
-					c = { bg = colors.none, fg = colors.lightgray },
+					b = { bg = colors.none, fg = colors.none },
+					c = { bg = colors.none, fg = colors.none },
 					y = { bg = colors.none, fg = colors.gray },
 					z = { bg = colors.none, fg = colors.none },
 				},
@@ -91,7 +91,7 @@ return {
 					-- section_separators = { left = "", right = "" },
 					-- section_separators = { left = "", right = "" },
 					-- section_separators = { left = "", right = "•" },
-					section_separators = { left = "", right = "" },
+					section_separators = { left = "", right = "" },
 					-- component_separators = { left = "", right = "" },
 					component_separators = { left = "", right = "" },
 				},
@@ -103,19 +103,18 @@ return {
 								return false
 							end,
 						},
-						{ "branch", color = { bg = colors.none } },
+						{ "branch", color = { fg = colors.lightgreen, bg = colors.none } },
 						{
 							"diagnostics",
 							always_visible = false,
+							color = { bg = colors.none },
 							diagnostics_color = {
-								error = { fg = "#c45441", bg = "none" }, -- Changes diagnostics' error color.
-								warn = { fg = "#e1d03e", bg = "none" }, -- Changes diagnostics' warn color.
-								info = { fg = "#9e4435", bg = "none" }, -- Changes diagnostics' info color.
-								hint = { fg = "#b9c156", bg = "none" }, -- Changes diagnostics' hint color.
+								error = { fg = "#c45441", bg = colors.none }, -- Changes diagnostics' error color.
+								warn = { fg = "#e1d03e", bg = colors.none }, -- Changes diagnostics' warn color.
+								info = { fg = "#9e4435", bg = colors.none }, -- Changes diagnostics' info color.
+								hint = { fg = "#b9c156", bg = colors.none }, -- Changes diagnostics' hint color.
 							},
 						},
-					},
-					lualine_c = {
 						{
 							"filetype",
 							icon_only = true,
@@ -126,7 +125,7 @@ return {
 						{
 							"filename",
 							path = 1,
-							color = { bg = colors.none },
+							color = { bg = colors.none, fg = colors.lightgray },
 							-- fmt = function(str)
 							-- 	-- return str:gsub("/", "  ")
 							-- 	return str:gsub("/", "  ")
@@ -134,6 +133,7 @@ return {
 							padding = { right = 0 },
 						},
 					},
+					lualine_c = {},
 					lualine_x = {},
 					lualine_y = {
 						{
