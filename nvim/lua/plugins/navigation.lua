@@ -21,17 +21,6 @@ return {
 		end,
 	},
 	{
-		"echasnovski/mini.pick",
-		version = false,
-		config = function()
-			require("mini.pick").setup({})
-		end,
-		keys = {
-			{ "<C-p>", "<cmd>Pick files<CR>" },
-			{ "<C-g>", "<cmd>Pick grep_live<CR>" },
-		},
-	},
-	{
 		"stevearc/oil.nvim",
 		---@module 'oil'
 		---@type oil.SetupOpts
@@ -48,5 +37,19 @@ return {
 				},
 			})
 		end,
+	},
+	{
+		"ibhagwan/fzf-lua",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			local fzf = require("fzf-lua")
+			vim.keymap.set("n", "<C-g>", function()
+				fzf.live_grep_glob()
+			end)
+			vim.keymap.set("n", "<C-p>", function()
+				fzf.files()
+			end)
+		end,
+		opts = {},
 	},
 }
