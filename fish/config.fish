@@ -47,6 +47,7 @@ end
 
 # Default preferences
 set fish_greeting
+set --universal nvm_default_version v22.13.1
 
 # Exa Plugin aliases
 alias els="exa -a -h -1 --icons"
@@ -71,11 +72,17 @@ export STUDIO_JDK="/usr/lib/jvm/java-1.17.0-openjdk-amd64"
 export ANDROID_SDK_ROOT="/usr/lib/android-sdk"
 export PATH="$PATH:/opt/nvim/"
 export PATH="/home/sultan/.config/herd-lite/bin:$PATH"
-
 export PATH="$HOME/.local/go/bin:$PATH"
 
-set --universal nvm_default_version v20.16.0
+# fzf-lua fix https://github.com/ibhagwan/fzf-lua/issues/1243#issuecomment-2168891260
+export XDG_RUNTIME_DIR=$HOME/.cache/
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/sultan/google-cloud-sdk/path.fish.inc' ]; . '/home/sultan/google-cloud-sdk/path.fish.inc'; end
+# if [ -f '/home/sultan/google-cloud-sdk/path.fish.inc' ]; . '/home/sultan/google-cloud-sdk/path.fish.inc'; end
+
