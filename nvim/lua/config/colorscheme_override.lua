@@ -88,6 +88,7 @@ function M.colorscheme_default()
 	vim.cmd("hi BufferLineDuplicateVisible guifg=#8893a7")
 	vim.cmd("hi BufferLineDuplicateSelected guifg=#8893a7")
 	vim.cmd("hi markdownError guibg=none")
+	vim.cmd("hi MsgArea guifg=#697281")
 	-- vim.cmd("hi Comment guifg=#697281")
 end
 
