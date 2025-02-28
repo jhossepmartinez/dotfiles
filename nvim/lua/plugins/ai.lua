@@ -31,5 +31,13 @@ return {
 		dependencies = {
 			"supermaven-inc/supermaven-nvim",
 		},
+		-- config = function()
+		-- 	require("supermaven-status").setup({
+		-- 		icons = {
+		-- 			running = "",
+		-- 			stopped = "",
+		-- 		},
+		-- 	})
+		-- end,
 	},
 }
