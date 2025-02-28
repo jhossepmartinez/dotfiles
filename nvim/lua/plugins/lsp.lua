@@ -8,7 +8,7 @@ local lsp_servers = {
 	"rust_analyzer",
 
 	-- "eslint",
-	"tsserver",
+	"ts_ls",
 	"html",
 	"cssls",
 	"tailwindcss",
