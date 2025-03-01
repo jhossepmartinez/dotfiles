@@ -22,6 +22,8 @@ return {
 					"prisma",
 
 					"java",
+
+					"fish",
 				},
 				highlight = {
 					enable = true,

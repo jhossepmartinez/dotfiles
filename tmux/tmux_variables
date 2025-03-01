@@ -1,0 +1,4 @@
+# vim: ft=tmux
+COLOR_GRAY="#62748e"
+COLOR_GRAY_2="#697281"
+COLOR_GRAY_3="#575a61"
