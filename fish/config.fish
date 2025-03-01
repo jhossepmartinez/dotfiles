@@ -49,9 +49,9 @@ end
 set fish_greeting
 set --universal nvm_default_version v22.13.1
 
-# Exa Plugin aliases
-alias els="exa -a -h -1 --icons"
-alias eld="exa -a -h -1 --icons --group-directories-first"
+# Eza 
+alias l="eza --icons --group-directories-first"
+alias ll="eza --group --icons --group-directories-first --long"
 
 # Utilities
 alias cl="clear"
@@ -86,3 +86,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # The next line updates PATH for the Google Cloud SDK.
 # if [ -f '/home/sultan/google-cloud-sdk/path.fish.inc' ]; . '/home/sultan/google-cloud-sdk/path.fish.inc'; end
 
+
+# pnpm
+set -gx PNPM_HOME "/home/sultan/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
