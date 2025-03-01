@@ -35,4 +35,4 @@ SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_user_paths:/home/sultan/\x2efzf/bin
-SETUVAR nvm_default_version:v20\x2e16\x2e0
+SETUVAR nvm_default_version:v22\x2e13\x2e1

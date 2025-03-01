@@ -1,8 +1,10 @@
-if status is-interactive # is-interactive means allowing user input
+if status is-interactive
     and not set -q TMUX
     exec tmux
-    # Commands to run in interactive sessions can go here
+
 end
+
+source ~/.config/fish/aliases/eza.fish
 
 # Minimal fish prompt
 function fish_prompt
@@ -50,13 +52,11 @@ set fish_greeting
 set --universal nvm_default_version v22.13.1
 
 # Eza 
-alias l="eza --icons --group-directories-first"
-alias ll="eza --group --icons --group-directories-first --long"
+# alias l="eza --icons --group-directories-first"
+# alias ll="eza --group --icons --group-directories-first --long"
 
 # Utilities
-alias cl="clear"
 alias clz="find . -name '*:Zone.Identifier' -type f -delete"
-alias avef="source ./venv/bin/activate.fish"
 
 # functions
 function mkcd
