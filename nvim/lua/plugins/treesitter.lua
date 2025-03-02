@@ -21,7 +21,7 @@ return {
 					"graphql",
 					"prisma",
 
-					"java",
+					-- "java",
 
 					"fish",
 				},
