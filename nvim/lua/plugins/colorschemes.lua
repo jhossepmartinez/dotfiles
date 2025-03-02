@@ -1,5 +1,17 @@
 return {
 	{
+		"maxmx03/solarized.nvim",
+		config = function()
+			vim.o.background = "dark"
+			require("solarized").setup({
+				variant = "winter", -- "spring" | "summer" | "autumn" | "winter" (default)
+				styles = {
+					comments = { italic = true },
+				},
+			})
+		end,
+	},
+	{
 		"EdenEast/nightfox.nvim",
 	},
 	{
@@ -26,15 +38,7 @@ return {
 			})
 		end,
 	},
-	{
-		"maxmx03/solarized.nvim",
-		config = function()
-			vim.o.background = "dark"
-			require("solarized").setup({
-				variant = "winter", -- "spring" | "summer" | "autumn" | "winter" (default)
-			})
-		end,
-	},
+
 	{ "rose-pine/neovim", name = "rose-pine" },
 	{ "heraldofsolace/nisha-vim" },
 	{
