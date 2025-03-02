@@ -4,8 +4,10 @@ if status is-interactive
 
 end
 
+set fish_greeting
+
 source ~/.config/fish/aliases/aliases.fish
-# source ~/.config/fish/functions/fish_prompt/fish_prompt.fish
+source ~/.config/fish/functions/fish_prompt/fish_prompt.fish
 
 # Minimal fish prompt
 # function fish_prompt
@@ -49,9 +51,7 @@ source ~/.config/fish/aliases/aliases.fish
 
 
 # Default preferences
-set fish_greeting
 set --universal nvm_default_version v22.13.1
-
 
 # functions
 function mkcd
