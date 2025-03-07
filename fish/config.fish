@@ -16,13 +16,14 @@ set VIRTUAL_ENV_DISABLE_PROMPT 1 # Disables virtual env prompt
 set -gx XDG_RUNTIME_DIR "$HOME/.cache/"
 
 # Environment variables
-set -gx PATH "$HOME/.cargo/bin" $PATH # Patch to run cargo with fish shell
 set -gx JAVA_HOME "/usr/lib/jvm/java-1.17.0-openjdk-amd64/"
 set -gx STUDIO_JDK "/usr/lib/jvm/java-1.17.0-openjdk-amd64"
 set -gx ANDROID_SDK_ROOT "/usr/lib/android-sdk"
+set -gx PATH "$HOME/.cargo/bin" $PATH # Patch to run cargo with fish shell
 set -gx PATH $PATH "/opt/nvim/"
 set -gx PATH "/home/sultan/.config/herd-lite/bin" $PATH
 set -gx PATH "$HOME/.local/go/bin" $PATH
+set -gx PATH "$HOME/.local/bin" $PATH
 
 # bun
 set -gx BUN_INSTALL "$HOME/.bun"
