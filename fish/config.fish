@@ -24,6 +24,7 @@ export ANDROID_SDK_ROOT="/usr/lib/android-sdk"
 export PATH="$PATH:/opt/nvim/"
 export PATH="/home/sultan/.config/herd-lite/bin:$PATH"
 export PATH="$HOME/.local/go/bin:$PATH"
+set -gx PATH "$HOME/.local/bin" $PATH
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -38,3 +39,5 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+zoxide init fish | source
