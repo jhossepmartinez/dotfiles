@@ -1,7 +1,6 @@
 if status is-interactive
     and not set -q TMUX
     exec tmux
-
 end
 
 source ~/.config/fish/functions/fish_prompt/fish_prompt.fish
