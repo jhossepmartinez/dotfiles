@@ -6,8 +6,8 @@ end
 
 set fish_greeting
 
-source ~/.config/fish/aliases/aliases.fish
 source ~/.config/fish/functions/fish_prompt/fish_prompt.fish
+source ~/.config/fish/aliases.fish
 
 # Default preferences
 set --universal nvm_default_version v22.13.1
