@@ -23,6 +23,7 @@ set -gx PATH "/opt/nvim/" $PATH
 set -gx PATH "/home/sultan/.config/herd-lite/bin" $PATH
 set -gx PATH "$HOME/.local/go/bin" $PATH
 set -gx PATH "$HOME/.local/bin" $PATH
+set -gx PATH "/mnt/c/Windows/" $PATH
 
 # bun
 set -gx BUN_INSTALL "$HOME/.bun"
