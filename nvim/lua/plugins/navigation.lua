@@ -49,7 +49,34 @@ return {
 			vim.keymap.set("n", "<C-p>", function()
 				fzf.files()
 			end)
+			fzf.setup({
+				winopts = {
+					width = 1,
+					row = 1,
+					border = {
+						" ", -- Top-left corner
+						"─", -- Top edge
+						"", -- Top-right corner
+						"", -- Right edge
+						"", -- Bottom-right corner
+						"", -- Bottom edge
+						"", -- Bottom-left corner
+						"", -- Left edge
+					},
+					preview = {
+						border = {
+							" ", -- Top-left corner
+							"─", -- Top edge
+							"", -- Top-right corner
+							"", -- Right edge
+							"", -- Bottom-right corner
+							"", -- Bottom edge
+							"", -- Bottom-left corner
+							"", -- Left edge
+						},
+					},
+				},
+			})
 		end,
-		opts = {},
 	},
 }
