@@ -205,6 +205,12 @@ return {
 					hide_gitignored = false,
 					hide_hidden = false,
 				},
+				window = {
+					mappings = {
+						["<bs>"] = "navigate_up",
+						["."] = "set_root",
+					},
+				},
 			},
 			follow_current_file = {
 				leave_dirs_open = false,
