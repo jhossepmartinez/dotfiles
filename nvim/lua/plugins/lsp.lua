@@ -28,23 +28,25 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		config = function()
+		config = function(_, opts)
 			require("mason").setup()
 			require("mason-lspconfig").setup({
 				ensure_installed = lsp_servers,
 			})
 			local lspconfig = require("lspconfig")
 			-- Automatic setup for lsp servers
+			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local handlers = {
 				-- The first entry (without a key) will be the default handler
 				-- and will be called for each installed server that doesn't have
 				-- a dedicated handler.
-				-- function(server_name) -- default handler (optional)
-				-- 	require("lspconfig")[server_name].setup({
-				-- 		capabilities = capabilities,
-				-- 	})
-				-- end,
+				function(server_name) -- default handler (optional)
+					lspconfig[server_name].setup({
+
+						capabilities = capabilities,
+					})
+				end,
 				-- Next, you can provide targeted overrides for specific servers.
 				["lua_ls"] = function()
 					lspconfig.lua_ls.setup({
