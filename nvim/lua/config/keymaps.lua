@@ -18,6 +18,10 @@ keymap("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
 keymap("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
 keymap("n", "<Leader>q", ":bp<bar>sp<bar>bn<bar>bd<CR>", { desc = "Close current buffer" })
 -- keymap("n", "zz", "<cmd>w<CR>", { desc = "Save current buffer" })
+keymap("n", "<C-d>", "<C-d>zz")
+keymap("n", "<C-u>", "<C-u>zz")
+keymap("n", "<C-f>", "<C-f>zz")
+keymap("n", "<C-b>", "<C-b>zz")
 
 -- Global diagnostics
 keymap("n", "[d", vim.diagnostic.goto_prev)
