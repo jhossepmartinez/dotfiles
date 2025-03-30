@@ -4,6 +4,7 @@ vim.g.mapleader = " " -- mapleader must be loaded before lazy
 
 -- General
 keymap("i", "jk", "<ESC>")
+keymap("i", "jj", "<ESC>")
 keymap("n", "j", "gj", { noremap = true, silent = true })
 keymap("n", "k", "gk", { noremap = true, silent = true })
 -- keymap("n", "<C-d>", "<C-d>zz", { noremap = true })
@@ -28,5 +29,5 @@ keymap("n", "[d", vim.diagnostic.goto_prev)
 keymap("n", "]d", vim.diagnostic.goto_next)
 
 -- Lsp
-keymap("n", "ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+keymap("n", "<Leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 keymap("n", "<Leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
