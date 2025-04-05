@@ -13,6 +13,7 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
+			cmdline = { enabled = false },
 			completion = {
 				menu = {
 					draw = {
