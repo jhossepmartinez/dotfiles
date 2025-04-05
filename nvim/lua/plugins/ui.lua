@@ -35,33 +35,38 @@ return {
 				},
 				insert = {
 					a = { bg = colors.red, fg = colors.black, gui = "bold" },
-					b = { bg = colors.none, fg = colors.lightgreen },
-					c = { bg = colors.none, fg = colors.lightgray },
+					b = { bg = colors.none, fg = colors.none },
+					c = { bg = colors.none, fg = colors.none },
 					y = { bg = colors.none, fg = colors.gray },
+					z = { bg = colors.none, fg = colors.none },
 				},
 				visual = {
 					a = { bg = "#955558", fg = "#ffbeb8", gui = "bold" },
-					b = { bg = colors.none, fg = colors.lightgreen },
-					c = { bg = colors.none, fg = colors.lightgray },
+					b = { bg = colors.none, fg = colors.none },
+					c = { bg = colors.none, fg = colors.none },
 					y = { bg = colors.none, fg = colors.gray },
+					z = { bg = colors.none, fg = colors.none },
 				},
 				replace = {
 					a = { bg = colors.red, fg = colors.black, gui = "bold" },
-					b = { bg = colors.none, fg = colors.lightgreen },
-					c = { bg = colors.none, fg = colors.lightgray },
+					b = { bg = colors.none, fg = colors.none },
+					c = { bg = colors.none, fg = colors.none },
 					y = { bg = colors.none, fg = colors.gray },
+					z = { bg = colors.none, fg = colors.none },
 				},
 				command = {
 					a = { bg = colors.green, fg = "#86a56c", gui = "bold" },
-					b = { bg = colors.none, fg = colors.lightgreen },
-					c = { bg = colors.none, fg = colors.lightgray },
+					b = { bg = colors.none, fg = colors.none },
+					c = { bg = colors.none, fg = colors.none },
 					y = { bg = colors.none, fg = colors.gray },
+					z = { bg = colors.none, fg = colors.none },
 				},
 				inactive = {
 					a = { bg = colors.darkgray, fg = colors.gray, gui = "bold" },
-					b = { bg = colors.none, fg = colors.lightgreen },
-					c = { bg = colors.none, fg = colors.lightgray },
+					b = { bg = colors.none, fg = colors.none },
+					c = { bg = colors.none, fg = colors.none },
 					y = { bg = colors.none, fg = colors.gray },
+					z = { bg = colors.none, fg = colors.none },
 				},
 			}
 			local function copilotStatus()
@@ -91,7 +96,7 @@ return {
 					-- section_separators = { left = "", right = "" },
 					-- section_separators = { left = "", right = "" },
 					-- section_separators = { left = "", right = "•" },
-					section_separators = { left = "", right = "" },
+					section_separators = { left = "", right = "" },
 					-- component_separators = { left = "", right = "" },
 					component_separators = { left = "", right = "" },
 				},
@@ -137,7 +142,23 @@ return {
 						},
 						{ copilotStatus },
 					},
-					lualine_z = {},
+					lualine_z = {
+						{
+							function()
+								local venv = os.getenv("VIRTUAL_ENV")
+								if venv then
+									local name = string.match(venv, "([^/]+)$")
+									return string.format("🐍 %s", name)
+								end
+								return ""
+							end,
+							cond = function() -- Extract just the env name
+								return os.getenv("VIRTUAL_ENV") ~= nil
+							end,
+							color = { fg = "#00d26a" },
+							padding = { left = 1, right = 0 },
+						},
+					},
 				},
 			})
 			vim.cmd("hi lualine_transitional_lualine_a_normal_to_lualine_c_normal guifg=#ffffff")
