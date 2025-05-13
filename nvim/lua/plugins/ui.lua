@@ -30,7 +30,7 @@ return {
 					a = { bg = "#ad5633", fg = "#fefad2", gui = "bold" },
 					b = { bg = colors.none, fg = colors.none },
 					c = { bg = colors.none, fg = colors.none },
-					y = { bg = colors.none, fg = colors.gray },
+					y = { bg = colors.none, fg = colors.none },
 					z = { bg = colors.none, fg = colors.none },
 				},
 				insert = {
@@ -72,7 +72,7 @@ return {
 			local function copilotStatus()
 				local client = vim.lsp.get_active_clients({ name = "copilot" })[1]
 				if client == nil then
-					return " "
+					return ""
 				end
 				if vim.tbl_isempty(client.requests) then
 					return " " -- default icon whilst copilot is idle
@@ -134,21 +134,27 @@ return {
 					},
 					lualine_c = {},
 					lualine_x = {},
+					lualine_z = {},
 					lualine_y = {
 						{
 							function()
 								return require("supermaven-status").status_string()
 							end,
 						},
-						{ copilotStatus },
-					},
-					lualine_z = {
+						{
+							copilotStatus,
+							padding = {
+								-- left = 0,
+								right = 1,
+							},
+						},
 						{
 							function()
 								local venv = os.getenv("VIRTUAL_ENV")
 								if venv then
 									local name = string.match(venv, "([^/]+)$")
-									return string.format("🐍 %s", name)
+									-- return string.format("🐍 %s", name)
+									return string.format("🐍", name)
 								end
 								return ""
 							end,
@@ -156,7 +162,7 @@ return {
 								return os.getenv("VIRTUAL_ENV") ~= nil
 							end,
 							color = { fg = "#00d26a" },
-							padding = { left = 1, right = 0 },
+							padding = { left = 0, right = 0 },
 						},
 					},
 				},
