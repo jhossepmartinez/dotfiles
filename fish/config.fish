@@ -19,12 +19,12 @@ set -gx XDG_RUNTIME_DIR "$HOME/.cache/"
 set -gx JAVA_HOME "/usr/lib/jvm/java-1.17.0-openjdk-amd64/"
 set -gx STUDIO_JDK "/usr/lib/jvm/java-1.17.0-openjdk-amd64"
 set -gx ANDROID_SDK_ROOT "/usr/lib/android-sdk"
-set -gx PATH "$HOME/.cargo/bin" $PATH # Patch to run cargo with fish shell
-set -gx PATH "/opt/nvim/" $PATH
-set -gx PATH "/home/sultan/.config/herd-lite/bin" $PATH
-set -gx PATH "$HOME/.local/go/bin" $PATH
-set -gx PATH "$HOME/.local/bin" $PATH
-set -gx PATH "/mnt/c/Windows/" $PATH
+set -gx PATH $PATH "$HOME/.cargo/bin" # Patch to run cargo with fish shell
+set -gx PATH $PATH "/opt/nvim/" 
+set -gx PATH $PATH "/home/sultan/.config/herd-lite/bin"
+set -gx PATH $PATH "$HOME/.local/go/bin"
+set -gx PATH $PATH "$HOME/.local/bin"
+set -gx PATH $PATH "/mnt/c/Windows/"
 
 # bun
 set -gx BUN_INSTALL "$HOME/.bun"
