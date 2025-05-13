@@ -10,6 +10,7 @@ source ~/.config/fish/aliases.fish
 set fish_greeting
 set --universal nvm_default_version v22.13.1
 set VIRTUAL_ENV_DISABLE_PROMPT 1 # Disables virtual env prompt
+set -gx MANPAGER "nvim -c 'Man!'"
 
 # fzf-lua fix https://github.com/ibhagwan/fzf-lua/issues/1243#issuecomment-2168891260
 set -gx XDG_RUNTIME_DIR "$HOME/.cache/"
