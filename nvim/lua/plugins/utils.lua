@@ -33,6 +33,7 @@ return {
 		"numToStr/Comment.nvim",
 		lazy = false,
 		config = true,
+		enabled = false,
 	},
 	{
 		"kylechui/nvim-surround",
