@@ -16,15 +16,23 @@ set -gx MANPAGER "nvim -c 'Man!'"
 set -gx XDG_RUNTIME_DIR "$HOME/.cache/"
 
 # Environment variables
-set -gx JAVA_HOME "/usr/lib/jvm/java-1.17.0-openjdk-amd64/"
-set -gx STUDIO_JDK "/usr/lib/jvm/java-1.17.0-openjdk-amd64"
-set -gx ANDROID_SDK_ROOT "/usr/lib/android-sdk"
 set -gx PATH $PATH "$HOME/.cargo/bin" # Patch to run cargo with fish shell
 set -gx PATH $PATH "/opt/nvim/" 
 set -gx PATH $PATH "/home/sultan/.config/herd-lite/bin"
 set -gx PATH $PATH "$HOME/.local/go/bin"
 set -gx PATH $PATH "$HOME/.local/bin"
 set -gx PATH $PATH "/mnt/c/Windows/"
+
+# Android 
+set -gx ANDROID_HOME $HOME/Android
+set -gx ANDROID_SDK_ROOT $ANDROID_HOME
+
+set -gx PATH /usr/bin /bin $PATH  # Critical system paths
+set -gx PATH $PATH $JAVA_HOME/bin
+set -gx PATH $PATH $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools $ANDROID_HOME/cmdline-tools/latest/bin
+
+set -Ux JAVA_HOME /usr/lib/jvm/java-21-openjdk-amd64
+set -Ux PATH $JAVA_HOME/bin $PATH
 
 # bun
 set -gx BUN_INSTALL "$HOME/.bun"
