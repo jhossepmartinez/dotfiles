@@ -12,7 +12,7 @@ return {
 				},
 			})
 		end,
-		enabled = true,
+		enabled = false,
 	},
 	{
 		"supermaven-inc/supermaven-nvim",
@@ -22,9 +22,10 @@ return {
 					accept_suggestion = "<Tab>",
 				},
 				log_level = "info",
+				ignore_filetypes = { markdown = true },
 			})
 		end,
-		enabled = false,
+		enabled = true,
 	},
 	{
 		"jhossepmartinez/supermaven-status.nvim",
