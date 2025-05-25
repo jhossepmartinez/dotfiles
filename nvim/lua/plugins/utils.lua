@@ -28,6 +28,7 @@ return {
 		},
 		---@type oklch.Opts
 		opts = {},
+		enabled = false,
 	},
 	{
 		"numToStr/Comment.nvim",
