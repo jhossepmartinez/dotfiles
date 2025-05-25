@@ -22,6 +22,7 @@ set -gx PATH $PATH "/home/sultan/.config/herd-lite/bin"
 set -gx PATH $PATH "$HOME/.local/go/bin"
 set -gx PATH $PATH "$HOME/.local/bin"
 set -gx PATH $PATH "/mnt/c/Windows/"
+set -gx PATH $PATH "$HOME/julia-1.8.1/bin"
 
 # Android 
 set -gx ANDROID_HOME $HOME/Android
