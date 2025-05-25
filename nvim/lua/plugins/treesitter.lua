@@ -24,6 +24,7 @@ return {
 					-- "java",
 
 					"fish",
+					"julia",
 				},
 				highlight = {
 					enable = true,
