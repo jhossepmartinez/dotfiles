@@ -8,6 +8,12 @@ return {
 				styles = {
 					comments = { italic = true },
 				},
+				on_highlights = function(colors, color)
+					return {
+						StatusLine = { bg = "NONE" },
+						StatusLineNC = { bg = "NONE" },
+					}
+				end,
 			})
 		end,
 	},
