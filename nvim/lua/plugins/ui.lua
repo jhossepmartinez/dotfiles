@@ -70,7 +70,7 @@ return {
 				},
 			}
 			local function copilotStatus()
-				local client = vim.lsp.get_active_clients({ name = "copilot" })[1]
+				local client = vim.lsp.get_clients({ name = "copilot" })[1]
 				if client == nil then
 					return ""
 				end
@@ -173,6 +173,7 @@ return {
 			})
 			vim.cmd("hi lualine_transitional_lualine_a_normal_to_lualine_c_normal guifg=#ffffff")
 		end,
+		enabled = true,
 	},
 	-- Neotree
 	{
