@@ -102,7 +102,11 @@ return {
 				},
 				sections = {
 					lualine_b = {
-						{ "branch", color = { fg = colors.lightgreen, bg = colors.none } },
+						{
+							"branch",
+							color = { fg = colors.lightgreen, bg = colors.none },
+							padding = { left = 1, right = 0 },
+						},
 						{
 							"diagnostics",
 							always_visible = false,
@@ -129,7 +133,7 @@ return {
 							-- 	-- return str:gsub("/", "  ")
 							-- 	return str:gsub("/", "  ")
 							-- end,
-							padding = { right = 0 },
+							padding = { left = 1, right = 0 },
 						},
 					},
 					lualine_c = {},
