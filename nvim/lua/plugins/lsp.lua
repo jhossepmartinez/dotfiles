@@ -24,7 +24,8 @@ local lsp_servers = {
 
 return {
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
+		opts = {},
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
@@ -41,24 +42,24 @@ return {
 				-- The first entry (without a key) will be the default handler
 				-- and will be called for each installed server that doesn't have
 				-- a dedicated handler.
-				function(server_name) -- default handler (optional)
-					lspconfig[server_name].setup({
-
-						capabilities = capabilities,
-					})
-				end,
+				-- function(server_name) -- default handler (optional)
+				-- 	lspconfig[server_name].setup({
+				--
+				-- 		capabilities = capabilities,
+				-- 	})
+				-- end,
 				-- Next, you can provide targeted overrides for specific servers.
-				["lua_ls"] = function()
-					lspconfig.lua_ls.setup({
-						settings = {
-							Lua = {
-								diagnostics = {
-									globals = { "vim" },
-								},
-							},
-						},
-					})
-				end,
+				-- ["lua_ls"] = function()
+				-- 	lspconfig.lua_ls.setup({
+				-- 		settings = {
+				-- 			Lua = {
+				-- 				diagnostics = {
+				-- 					globals = { "vim" },
+				-- 				},
+				-- 			},
+				-- 		},
+				-- 	})
+				-- end,
 
 				["eslint"] = function()
 					lspconfig.eslint.setup({
@@ -94,7 +95,7 @@ return {
 				-- 	})
 				-- end,
 			}
-			require("mason-lspconfig").setup({ handlers = handlers })
+			-- require("mason-lspconfig").setup({ handlers = handlers })
 
 			-- require("mason-lspconfig").setup_handlers({
 			-- 	-- Called for each installed server
@@ -151,22 +152,23 @@ return {
 			-- end,
 			-- })
 		end,
+		enabled = false,
 	},
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			-- Disable / Enable inline diagnostics
-			vim.diagnostic.config({
-				virtual_text = true,
-				float = {
-					show_header = true,
-					source = "always",
-					border = "none",
-					focusable = true,
-				},
-			})
-		end,
-	},
+	-- {
+	-- 	"neovim/nvim-lspconfig",
+	-- 	config = function()
+	-- 		-- Disable / Enable inline diagnostics
+	-- 		vim.diagnostic.config({
+	-- 			virtual_text = true,
+	-- 			float = {
+	-- 				show_header = true,
+	-- 				source = "always",
+	-- 				border = "none",
+	-- 				focusable = true,
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 	-- {
 	-- 	"kosayoda/nvim-lightbulb",
 	-- 	config = function()

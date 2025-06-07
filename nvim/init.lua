@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Configuration
 require("config.options")
 require("config.keymaps")
+require("config.lsp")
 
 -- Load plugins using lazy
 vim.g.mapleader = " " -- mapleader must be loaded before lazy
@@ -30,3 +31,8 @@ local theme = require("config.colorscheme_override")
 theme.colorscheme_addon()
 theme.transparent_override()
 theme.colorscheme_default()
+
+vim.lsp.enable({
+    "lua_ls",
+})
+
