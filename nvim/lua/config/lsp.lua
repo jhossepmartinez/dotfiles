@@ -1,4 +1,16 @@
-vim.lsp.enable({ "lua_ls", "ts_ls", "graphql", "html", "cssls", "emmet_ls", "vimls", "prismals", "tailwind", "eslint" })
+vim.lsp.enable({
+	"lua_ls",
+	"ts_ls",
+	"graphql",
+	"html",
+	"cssls",
+	"emmet_ls",
+	"vimls",
+	"prismals",
+	"tailwind",
+	"eslint",
+	"pyright",
+})
 
 vim.diagnostic.config({
 	virtual_text = true,
