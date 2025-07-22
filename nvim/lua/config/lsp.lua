@@ -10,6 +10,7 @@ vim.lsp.enable({
 	"tailwind",
 	"eslint",
 	"pyright",
+	"rust_analyzer",
 })
 
 vim.diagnostic.config({
