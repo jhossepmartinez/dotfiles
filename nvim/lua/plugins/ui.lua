@@ -103,20 +103,36 @@ return {
 				sections = {
 					lualine_b = {
 						{
+							function()
+								local venv = os.getenv("VIRTUAL_ENV")
+								if venv then
+									local name = string.match(venv, "([^/]+)$")
+									-- return string.format("🐍 %s", name)
+									return string.format("%s", name)
+								end
+								return ""
+							end,
+							cond = function() -- Extract just the env name
+								return os.getenv("VIRTUAL_ENV") ~= nil
+							end,
+							color = { fg = "#00d26a" },
+							padding = { left = 1, right = 0 },
+						},
+						{
 							"branch",
 							color = { fg = colors.lightgreen, bg = colors.none },
 							padding = { left = 1, right = 0 },
 						},
 						{
 							"diagnostics",
-							always_visible = false,
-							color = { bg = colors.none },
-							diagnostics_color = {
-								error = { fg = "#c45441", bg = colors.none }, -- Changes diagnostics' error color.
-								warn = { fg = "#e1d03e", bg = colors.none }, -- Changes diagnostics' warn color.
-								info = { fg = "#9e4435", bg = colors.none }, -- Changes diagnostics' info color.
-								hint = { fg = "#b9c156", bg = colors.none }, -- Changes diagnostics' hint color.
-							},
+							-- color = { bg = colors.none },
+							padding = { left = 1, right = 0 },
+							-- diagnostics_color = {
+							-- 	error = { fg = "#c45441", bg = colors.none }, -- Changes diagnostics' error color.
+							-- 	warn = { fg = "#e1d03e", bg = colors.none }, -- Changes diagnostics' warn color.
+							-- 	info = { fg = "#9e4435", bg = colors.none }, -- Changes diagnostics' info color.
+							-- 	hint = { fg = "#b9c156", bg = colors.none }, -- Changes diagnostics' hint color.
+							-- },
 						},
 						{
 							"filetype",
@@ -151,22 +167,6 @@ return {
 								-- left = 0,
 								right = 1,
 							},
-						},
-						{
-							function()
-								local venv = os.getenv("VIRTUAL_ENV")
-								if venv then
-									local name = string.match(venv, "([^/]+)$")
-									-- return string.format("🐍 %s", name)
-									return string.format("🐍", name)
-								end
-								return ""
-							end,
-							cond = function() -- Extract just the env name
-								return os.getenv("VIRTUAL_ENV") ~= nil
-							end,
-							color = { fg = "#00d26a" },
-							padding = { left = 0, right = 0 },
 						},
 					},
 				},
