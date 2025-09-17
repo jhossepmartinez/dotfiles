@@ -7,24 +7,21 @@ return {
 					"c",
 					"lua",
 					"vim",
-
 					"markdown",
 					"markdown_inline",
 					"json",
-
 					"rust",
 					"python",
-
 					"javascript",
 					"typescript",
 					"html",
 					"graphql",
 					"prisma",
-
 					-- "java",
-
 					"fish",
 					"julia",
+					"proto",
+					"go",
 				},
 				highlight = {
 					enable = true,

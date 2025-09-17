@@ -11,6 +11,7 @@ vim.lsp.enable({
 	"eslint",
 	"pyright",
 	"rust_analyzer",
+	"gopls",
 })
 
 vim.diagnostic.config({
