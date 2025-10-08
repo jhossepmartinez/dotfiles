@@ -22,17 +22,11 @@ vim.g.mapleader = " " -- mapleader must be loaded before lazy
 require("lazy").setup("plugins")
 
 -- Set Colorscheme
--- vim.g.ayucolor = "mirage"
 vim.cmd("colorscheme solarized")
--- Nisha theme seems nice
 
 -- Transparency override
 local theme = require("config.colorscheme_override")
 theme.colorscheme_addon()
 theme.transparent_override()
 theme.colorscheme_default()
-
-vim.lsp.enable({
-    "lua_ls",
-})
-
+local aaa = ""

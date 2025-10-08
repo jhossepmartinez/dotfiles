@@ -7,9 +7,6 @@ keymap("i", "jk", "<ESC>")
 keymap("i", "jj", "<ESC>")
 keymap("n", "j", "gj", { noremap = true, silent = true })
 keymap("n", "k", "gk", { noremap = true, silent = true })
--- keymap("n", "<C-d>", "<C-d>zz", { noremap = true })
--- keymap("n", "<C-u>", "<C-u>zz", { noremap = true })
--- keymap("n", "j", "gj", { noremap = true, silent = true })
 
 -- Split window management
 keymap("n", "<Leader>cs", ":close<CR>")
