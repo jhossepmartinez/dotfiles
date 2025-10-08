@@ -20,6 +20,7 @@ local lsp_servers = {
 
 	"jdtls",
 	"phpactor",
+	"protols",
 }
 
 return {

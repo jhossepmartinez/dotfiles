@@ -67,6 +67,5 @@ return {
 				ensure_installed = formatters,
 			})
 		end,
-		enabled = false,
 	},
 }
