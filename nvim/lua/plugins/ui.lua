@@ -138,18 +138,25 @@ return {
 							"filetype",
 							icon_only = true,
 							padding = { right = 0, left = 1 },
-							always_visible = false,
 							color = { bg = colors.none },
+							fmt = function(str)
+								if str == "" then
+									return "%s", str
+								end
+								return "%s", str
+							end,
 						},
 						{
 							"filename",
 							path = 1,
 							color = { bg = colors.none, fg = colors.lightgray },
 							-- fmt = function(str)
-							-- 	-- return str:gsub("/", "  ")
-							-- 	return str:gsub("/", "  ")
+							-- 	if str == "[No Name]" then
+							-- 		return " [No Name]"
+							-- 	end
+							-- 	return str
 							-- end,
-							padding = { left = 1, right = 0 },
+							padding = { left = 0, right = 0 },
 						},
 					},
 					lualine_c = {},
@@ -248,7 +255,9 @@ return {
 				leave_dirs_open = false,
 			},
 			default_component_configs = {
-				icon = {},
+				icon = {
+					folder_empty = "",
+				},
 			},
 		},
 	},
