@@ -12,7 +12,7 @@ return {
 				},
 			})
 		end,
-		enabled = false,
+		enabled = true,
 	},
 	{
 		"supermaven-inc/supermaven-nvim",
@@ -25,7 +25,7 @@ return {
 				ignore_filetypes = { markdown = true },
 			})
 		end,
-		enabled = true,
+		enabled = false,
 	},
 	{
 		"jhossepmartinez/supermaven-status.nvim",
