@@ -29,4 +29,4 @@ local theme = require("config.colorscheme_override")
 theme.colorscheme_addon()
 theme.transparent_override()
 theme.colorscheme_default()
-local aaa = ""
+require("config.highlights")

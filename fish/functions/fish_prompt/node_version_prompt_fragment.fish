@@ -1,6 +1,6 @@
 function node_version_prompt_fragment
     if test -e "package.json" || count *.js > /dev/null
-        set_color "71c450"
+        set_color "#71c450"
         set -l is_lts (node -pe 'process.release.lts !== "undefined" ? true : false')
         echo -n "󰎙 "(node -v | sed 's/v//')" "
 

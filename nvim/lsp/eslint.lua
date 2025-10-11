@@ -1,5 +1,4 @@
 local lsp = vim.lsp
-local lsp = vim.lsp
 
 local eslint_config_files = {
 	".eslintrc",

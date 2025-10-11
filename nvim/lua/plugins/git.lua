@@ -4,9 +4,9 @@ return {
 	},
 	{
 		"kdheepak/lazygit.nvim",
-		keys = {
-			{ "<Leader>gg", "<cmd>LazyGit<CR>" },
-		},
+		-- keys = {
+		-- 	{ "<Leader>gg", "<cmd>LazyGit<CR>" },
+		-- },
 	},
 	{
 		"NeogitOrg/neogit",
@@ -15,7 +15,17 @@ return {
 			"sindrets/diffview.nvim",
 			"ibhagwan/fzf-lua",
 		},
-		config = true,
+		config = function()
+			require("neogit").setup({
+				kind = "vsplit",
+				commit_editor = {
+					kind = "vsplit",
+				},
+			})
+		end,
+		keys = {
+			{ "<Leader>gg", "<cmd>Neogit<CR>" },
+		},
 	},
 	{
 		"lewis6991/gitsigns.nvim",
