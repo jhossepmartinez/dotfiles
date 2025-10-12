@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+vim.g.mapleader = " " -- mapleader must be loaded before lazy
+
 -- Line Number
 opt.relativenumber = true
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)

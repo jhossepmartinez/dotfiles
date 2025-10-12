@@ -1,7 +1,5 @@
 local keymap = vim.keymap.set
 
-vim.g.mapleader = " " -- mapleader must be loaded before lazy
-
 -- General
 keymap("i", "jk", "<ESC>")
 keymap("i", "jj", "<ESC>")

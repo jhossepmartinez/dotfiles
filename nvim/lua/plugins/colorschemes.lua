@@ -5,6 +5,7 @@ return {
 			vim.o.background = "dark"
 			require("solarized").setup({
 				variant = "winter", -- "spring" | "summer" | "autumn" | "winter" (default)
+				transparent = { enabled = true, pmenu = false },
 				styles = {
 					comments = { italic = true },
 				},

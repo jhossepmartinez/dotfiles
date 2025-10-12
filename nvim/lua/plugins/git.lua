@@ -17,7 +17,7 @@ return {
 		},
 		config = function()
 			require("neogit").setup({
-				kind = "vsplit",
+				kind = "replace",
 				commit_editor = {
 					kind = "vsplit",
 				},
