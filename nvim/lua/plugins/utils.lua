@@ -9,6 +9,11 @@ return {
 					hsl_fn = true,
 					names = true,
 				},
+				typescriptreact = {
+					rgb_fn = true,
+					hsl_fn = true,
+					css = true,
+				},
 			})
 		end,
 	},
