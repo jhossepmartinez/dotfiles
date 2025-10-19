@@ -3,6 +3,7 @@ vim.cmd("hi FoldColumn guibg=none")
 
 vim.cmd("hi CursorLineNr guifg=#f2f2f2")
 vim.cmd("hi CursorLineFold guifg=#f2f2f2")
+vim.cmd("hi CursorLine guibg=none")
 
 vim.cmd("hi NeogitBranch guifg=#FFC100")
 vim.cmd("hi NeogitSectionHeader guifg=#6c71c4")
