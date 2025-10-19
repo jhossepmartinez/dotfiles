@@ -39,3 +39,5 @@ vim.opt.fillchars:append({ foldopen = "", foldsep = " ", foldclose = "", v
 
 -- Providers
 vim.g.python3_host_prog = "/usr/bin/python3"
+
+vim.opt.wildmode = "noselect:lastused,full"

@@ -11,9 +11,17 @@ return {
 		},
 		version = "*",
 		opts = {
-			cmdline = { enabled = false },
+			cmdline = {
+				enabled = true,
+				completion = {
+					menu = {
+						auto_show = true,
+					},
+				},
+			},
 			completion = {
 				menu = {
+					-- max_height = 999,
 					draw = {
 						columns = {
 							{ "label", "label_description", gap = 1 },
@@ -24,7 +32,7 @@ return {
 				},
 				documentation = {
 					auto_show = true,
-					auto_show_delay_ms = 500,
+					auto_show_delay_ms = 0,
 				},
 			},
 			snippets = { preset = "luasnip" },
@@ -33,7 +41,6 @@ return {
 			sources = {
 				default = { "lsp", "buffer", "path", "snippets" },
 			},
-
 			fuzzy = { implementation = "prefer_rust_with_warning" },
 		},
 	},
