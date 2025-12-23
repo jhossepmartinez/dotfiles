@@ -21,6 +21,8 @@ local lsp_servers = {
 	"jdtls",
 	"phpactor",
 	"protols",
+
+	"terraform-ls",
 }
 
 return {

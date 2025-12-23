@@ -14,9 +14,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("config.options")
 require("config.lsp")
+require("config.keymaps")
 
 require("lazy").setup("plugins")
 
 vim.cmd("colorscheme solarized")
 require("config.highlights")
-require("config.keymaps")
+require("scripts.diagnostics").setup()

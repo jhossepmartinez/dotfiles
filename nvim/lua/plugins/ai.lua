@@ -12,7 +12,7 @@ return {
 				},
 			})
 		end,
-		enabled = true,
+		enabled = false,
 	},
 	{
 		"supermaven-inc/supermaven-nvim",

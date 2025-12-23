@@ -18,6 +18,7 @@ opt.smarttab = true
 -- Search Settings
 opt.ignorecase = true
 opt.smartcase = true
+opt.iskeyword = "@,48-57,_,192-255,-" -- Treat dash as `word` textobject
 
 -- Appearance
 opt.termguicolors = true

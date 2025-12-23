@@ -13,15 +13,9 @@ return {
 		opts = {
 			cmdline = {
 				enabled = true,
-				completion = {
-					menu = {
-						auto_show = true,
-					},
-				},
 			},
 			completion = {
 				menu = {
-					-- max_height = 999,
 					draw = {
 						columns = {
 							{ "label", "label_description", gap = 1 },

@@ -5,6 +5,7 @@ local formatters = {
 	"prettierd",
 	-- "eslint_d", -- Remember to install eslint_d globally
 	"php-cs-fixer",
+	"buf",
 }
 
 return {
@@ -30,6 +31,8 @@ return {
 					html = { "prettier" },
 					python = { "black" },
 					php = { "php_cs_fixer" },
+					proto = { "buf" },
+					terraform = { "terraform_fmt" },
 					-- ckl = { "prettier" },
 				},
 				format_after_save = {

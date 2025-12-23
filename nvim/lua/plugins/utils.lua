@@ -38,7 +38,7 @@ return {
 		config = function()
 			require("hover").setup({
 				init = function()
-					require("hover.providers.diagnostic")
+					-- require("hover.providers.diagnostic")
 					require("hover.providers.lsp")
 				end,
 				-- preview_opts = {
