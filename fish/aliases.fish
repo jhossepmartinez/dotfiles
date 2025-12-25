@@ -16,6 +16,7 @@ alias gri="git rebase -i"
 alias cl="clear"
 alias clz="find . -name '*:Zone.Identifier' -type f -delete"
 alias rmswap="rm -rf $HOME/.local/state/nvim/swap"
+# alias lalias="alias | sed 's/\\\\//g' "
 
 # Python
 alias act="source ./venv/bin/activate.fish"
