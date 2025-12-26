@@ -35,9 +35,13 @@ return {
 					terraform = { "terraform_fmt" },
 					-- ckl = { "prettier" },
 				},
-				format_after_save = {
-					lsp_format = "fallback",
-				},
+				format_after_save = function(bufnr)
+					local filetype = vim.bo[bufnr].filetype
+					if filetype == "gitcommit" or filetype == "gitrebase" then
+						return
+					end
+					return { lsp_format = "fallback" }
+				end,
 				formatters = {
 					php_cs_fixer = {
 						command = "php-cs-fixer",
