@@ -22,4 +22,9 @@ vim.diagnostic.config({
 	underline = true,
 	update_in_insert = true,
 	severity_sort = true,
+	float = {
+		format = function(diagnostic)
+			return "▌" .. diagnostic.message
+		end,
+	},
 })

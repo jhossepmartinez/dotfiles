@@ -1,3 +1,5 @@
+vim.g.mapleader = " " -- mapleader must be loaded before lazy
+
 local keymap = vim.keymap.set
 
 -- General

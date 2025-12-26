@@ -44,7 +44,7 @@ return {
 		config = function()
 			local fzf = require("fzf-lua")
 			vim.keymap.set("n", "<C-g>", function()
-				fzf.live_grep_glob()
+				fzf.live_grep()
 			end)
 			vim.keymap.set("n", "<C-p>", function()
 				fzf.files()

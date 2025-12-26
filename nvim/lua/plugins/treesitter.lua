@@ -22,6 +22,7 @@ return {
 					"julia",
 					"proto",
 					"go",
+					"terraform",
 				},
 				highlight = {
 					enable = true,
