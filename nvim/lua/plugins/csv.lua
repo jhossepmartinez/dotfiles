@@ -35,4 +35,5 @@ return {
 			mode = "n",
 		},
 	},
+	enabled = false,
 }

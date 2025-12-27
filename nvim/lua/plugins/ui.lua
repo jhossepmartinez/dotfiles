@@ -164,11 +164,6 @@ return {
 					lualine_z = {},
 					lualine_y = {
 						{
-							function()
-								return require("supermaven-status").status_string()
-							end,
-						},
-						{
 							copilotStatus,
 							padding = {
 								-- left = 0,
